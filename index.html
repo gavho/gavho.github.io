@@ -106,66 +106,48 @@
     <section id="research" class="section container">
       <div class="section-head reveal">
         <p class="eyebrow">Featured research</p>
-        <h2>Rainfall and Runways</h2>
-        <p class="section-sub">Modeling flood risk and mitigation at Jasper County Airport, a rural general aviation field in Rensselaer, Indiana.</p>
+        <h2>Flood risk at rural airports</h2>
+        <p class="section-sub">Modeling flooding and drainage mitigation at Jasper County Airport, a general aviation field in Rensselaer, Indiana.</p>
       </div>
 
       <div class="case reveal">
-        <button class="case-hero zoom" data-src="assets/img/flood-severe-event.jpg" data-caption="Severe rainfall event: simulated water depth at airport hazard points">
-          <img src="assets/img/flood-severe-event.jpg" alt="Map of Jasper County Airport showing simulated flood water depth in blue along the runway and taxiways" loading="lazy">
-        </button>
+        <a class="case-hero" href="https://arcg.is/1OrvXn0" target="_blank" rel="noopener" aria-label="Open the Rainfall and Runways StoryMap">
+          <img src="assets/img/storymap-cover.jpg" alt="Airliner tail beside a flooded airport ramp as a truck drives through standing water" loading="lazy">
+          <span class="cover-panel">
+            <span class="mono cover-kicker">ArcGIS StoryMap · Gavin Ho</span>
+            <span class="cover-title">Rainfall and Runways</span>
+            <span class="cover-sub">A Deep Dive into Flood Risks at Rural Airports</span>
+            <span class="cover-link">Read the story ↗</span>
+          </span>
+        </a>
         <div class="case-body">
-          <div class="case-meta">
-            <span class="badge">ArcGIS Pro 3.3 · Flood simulation</span>
-            <span class="mono muted">Sep — Dec 2024</span>
+          <div>
+            <div class="case-meta">
+              <span class="badge">ArcGIS Pro 3.3 · Flood simulation</span>
+              <span class="mono muted">Sep — Dec 2024</span>
+            </div>
+            <p class="case-summary">
+              Rural airports rarely have advanced drainage, and even 3 mm of standing water can cause aquaplaning.
+              I simulated historical and record rainfall events on a 2.5 m terrain model to find where water
+              collects on runways, taxiways and aprons. I then designed and tested drainage mitigation directly in the DEM.
+            </p>
+            <h3 class="case-title">Risks identified</h3>
+            <ul class="chips">
+              <li>Runway hydroplaning</li><li>Taxiway traction loss</li><li>Fuel station contamination</li>
+              <li>Grass runway softening</li><li>Hangar &amp; apron access</li><li>Emergency road access</li>
+            </ul>
           </div>
-          <p>
-            Rural airports rarely have advanced drainage, and even 3 mm of standing water can cause aquaplaning.
-            I simulated historical and record rainfall events on a 2.5 m terrain model to find where water
-            collects on runways, taxiways and aprons. I then designed and tested drainage mitigation directly in the DEM.
-          </p>
-          <h3 class="case-title">Approach</h3>
-          <ol class="steps">
-            <li><span class="mono">01</span>Baseline model of a real 2018 storm (2.67 in over 1.5 hr) from NOAA records</li>
-            <li><span class="mono">02</span>Time-series and back-to-back rainfall runs, using each depth raster as the next baseline</li>
-            <li><span class="mono">03</span>SSURGO soil infiltration (clay loam vs. sandy loam) folded into the model</li>
-            <li><span class="mono">04</span>A reusable ModelBuilder tool for drainage-line delineation, validated against Indiana's record 2.7 in/hr event</li>
-            <li><span class="mono">05</span>Proposed 12 m drainage ditches carved into the DEM with Euclidean Distance to redirect flow</li>
-          </ol>
-          <h3 class="case-title">Risks identified</h3>
-          <ul class="chips">
-            <li>Runway hydroplaning</li><li>Taxiway traction loss</li><li>Fuel station contamination</li>
-            <li>Grass runway softening</li><li>Hangar &amp; apron access</li><li>Emergency road access</li>
-          </ul>
-          <a href="https://arcg.is/1OrvXn0" class="btn btn-primary case-cta" target="_blank" rel="noopener">Read the StoryMap ↗</a>
+          <div>
+            <h3 class="case-title case-title-first">Approach</h3>
+            <ol class="steps">
+              <li><span class="mono">01</span>Baseline model of a real 2018 storm (2.67 in over 1.5 hr) from NOAA records</li>
+              <li><span class="mono">02</span>Time-series and back-to-back rainfall runs, using each depth raster as the next baseline</li>
+              <li><span class="mono">03</span>SSURGO soil infiltration (clay loam vs. sandy loam) folded into the model</li>
+              <li><span class="mono">04</span>A reusable ModelBuilder tool for drainage-line delineation, validated against Indiana's record 2.7 in/hr event</li>
+              <li><span class="mono">05</span>Proposed 12 m drainage ditches carved into the DEM with Euclidean Distance to redirect flow</li>
+            </ol>
+          </div>
         </div>
-      </div>
-
-      <div class="gallery">
-        <figure class="reveal">
-          <button class="zoom" data-src="assets/img/flood-baseline.jpg" data-caption="Baseline flood analysis: 1.78 in/hr rainfall for 1.5 hours">
-            <img src="assets/img/flood-baseline.jpg" alt="Flood depth map of Jasper County Airport for the baseline rainfall scenario" loading="lazy">
-          </button>
-          <figcaption>Baseline flood depth</figcaption>
-        </figure>
-        <figure class="reveal">
-          <button class="zoom" data-src="assets/img/flood-3d-sim.jpg" data-caption="3D flood simulation in ArcGIS Pro">
-            <img src="assets/img/flood-3d-sim.jpg" alt="3D scene of the airport with simulated flood water pooling near the runway" loading="lazy">
-          </button>
-          <figcaption>3D flood simulation</figcaption>
-        </figure>
-        <figure class="reveal">
-          <button class="zoom" data-src="assets/img/flood-drainage-lines.jpg" data-caption="DEM-derived drainage lines across the airfield">
-            <img src="assets/img/flood-drainage-lines.jpg" alt="Aerial image of the airport with red drainage lines derived from the terrain model" loading="lazy">
-          </button>
-          <figcaption>Drainage delineation</figcaption>
-        </figure>
-        <figure class="reveal">
-          <button class="zoom" data-src="assets/img/flood-record-event.jpg" data-caption="Validation against Indiana's record 2.7 in/hr rainfall event">
-            <img src="assets/img/flood-record-event.jpg" alt="Flood depth map for a record 2.7 inch per hour rainfall event" loading="lazy">
-          </button>
-          <figcaption>Record-event validation</figcaption>
-        </figure>
       </div>
 
       <!-- More research -->
@@ -375,11 +357,6 @@
     </div>
   </footer>
 
-  <dialog id="lightbox" aria-label="Figure viewer">
-    <button class="lb-close" aria-label="Close">✕</button>
-    <img alt="">
-    <p class="lb-caption"></p>
-  </dialog>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -388,15 +365,6 @@
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('in'));
-
-    const lb = document.getElementById('lightbox');
-    document.querySelectorAll('.zoom').forEach((btn) => btn.addEventListener('click', () => {
-      lb.querySelector('img').src = btn.dataset.src;
-      lb.querySelector('img').alt = btn.querySelector('img').alt;
-      lb.querySelector('.lb-caption').textContent = btn.dataset.caption;
-      lb.showModal();
-    }));
-    lb.addEventListener('click', (e) => { if (e.target === lb || e.target.closest('.lb-close')) lb.close(); });
   </script>
 </body>
 </html>
