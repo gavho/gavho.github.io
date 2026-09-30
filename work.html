@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Gavin Ho</title>
+  <meta name="description" content="Selected work by Gavin Ho beyond aviation: historical GIS for Purdue's FORCES Initiative, airport digital twins, UAS payload engineering, data tools and APEX UAS.">
+  <meta property="og:title" content="Work — Gavin Ho">
+  <meta property="og:description" content="Where I apply geospatial and technical skills outside aviation.">
+  <meta property="og:image" content="assets/img/apex-heritage-lake.jpg">
+  <meta name="theme-color" content="#010102">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235e6ad2'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Gavin Ho, home">
+        <span class="brand-mark">GH</span>
+        <span>Gavin Ho</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#research">Research</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="index.html#work">Experience</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a href="#contact" class="btn btn-secondary nav-cta">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true">
+        <svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="currentColor" stroke-width="1">
+            <path d="M-20 420c120-40 220-10 330-60s170-140 300-150 230 60 360 30 180-110 260-120"/>
+            <path d="M-20 380c120-40 230-20 330-70s180-130 300-140 220 50 350 20 190-100 270-110"/>
+            <path d="M-20 340c130-40 230-30 330-80s180-120 300-130 210 40 340 10 200-90 280-100"/>
+            <path d="M-20 300c140-40 240-40 340-90s170-110 290-120 200 30 330 0 210-80 290-90"/>
+            <path d="M-20 260c150-40 250-50 350-100s160-100 280-110 190 20 320-10 220-70 300-80"/>
+            <path d="M-20 220c160-40 260-60 360-110s150-90 270-100 180 10 310-20 230-60 310-70"/>
+            <path d="M-20 180c170-40 270-70 370-120s140-80 260-90 170 0 300-30 240-50 320-60"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container page-hero-inner">
+        <p class="coords mono reveal">Selected work · Beyond aviation</p>
+        <h1 class="reveal">Where I apply technical knowledge.</h1>
+        <p class="lead reveal">
+          Aviation is my day job, but the same toolkit carries over to other fields. I've used it to reconstruct a
+          1941 military campaign from archival maps, survey an airport for a digital twin, engineer a drone payload
+          system and run a small aerial imaging business. In each case I built a workflow that turns messy
+          real-world data into something people can use.
+        </p>
+        <nav class="jump reveal" aria-label="On this page">
+          <a href="#forces">Historical GIS</a>
+          <a href="#digital-twin">Digital twin</a>
+          <a href="#payload">UAS engineering</a>
+          <a href="#tools">Data &amp; software</a>
+          <a href="#interests">Interests</a>
+          <a href="#apex">APEX UAS</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- FORCES / Barbarossa -->
+    <section id="forces" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 · Purdue FORCES Initiative</p>
+        <h2>Reconstructing Operation Barbarossa with spatial data science</h2>
+        <p class="section-sub">
+          Purdue's FORCES Initiative (Strategy, Security &amp; Social Systems) studies how leaders make decisions under
+          uncertainty. I led the geospatial side of its Operation Barbarossa project, turning WWII-era operational maps into
+          an analyzable, queryable dataset of the 1941 invasion of the Soviet Union.
+        </p>
+      </div>
+
+      <div class="case reveal">
+        <div class="embed" data-src="https://experience.arcgis.com/experience/ba5e82851a854d8387a89ea37c32a009">
+          <div class="embed-poster" aria-hidden="true">
+            <svg viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#828fff"/></marker>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#23252a" stroke-width="1"/></pattern>
+              </defs>
+              <rect width="800" height="340" fill="url(#grid)"/>
+              <g fill="none" stroke="#828fff" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" opacity=".85">
+                <path d="M90 80C200 70 300 60 420 70"/>
+                <path d="M70 170C210 165 330 170 520 160"/>
+                <path d="M90 260C220 270 300 290 430 285"/>
+              </g>
+              <g fill="none" stroke="#62666d" stroke-width="1.5" stroke-dasharray="4 6">
+                <path d="M470 40C500 120 560 180 540 240S500 300 480 320"/>
+              </g>
+              <g fill="#d0d6e0">
+                <circle cx="150" cy="76" r="3"/><circle cx="240" cy="68" r="3"/><circle cx="330" cy="64" r="3"/>
+                <circle cx="160" cy="168" r="3"/><circle cx="260" cy="167" r="3"/><circle cx="380" cy="168" r="3"/><circle cx="450" cy="164" r="3"/>
+                <circle cx="170" cy="268" r="3"/><circle cx="270" cy="282" r="3"/><circle cx="360" cy="287" r="3"/>
+              </g>
+              <g font-family="JetBrains Mono, monospace" font-size="11" fill="#8a8f98">
+                <text x="90" y="62">AG NORTH</text><text x="70" y="152">AG CENTER</text><text x="90" y="248">AG SOUTH</text>
+                <text x="560" y="320">JUN — SEP 1941</text>
+              </g>
+            </svg>
+          </div>
+          <div class="embed-overlay">
+            <span class="mono cover-kicker">ArcGIS Experience · Interactive dashboard</span>
+            <span class="cover-title">Operation Barbarossa</span>
+            <span class="cover-sub">Divisional movements for Army Groups North, Center and South</span>
+            <div class="embed-actions">
+              <button type="button" class="btn btn-primary embed-load">Load live dashboard</button>
+              <a class="btn btn-secondary" href="https://experience.arcgis.com/experience/ba5e82851a854d8387a89ea37c32a009" target="_blank" rel="noopener">Open full screen ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="case-body">
+          <div>
+            <div class="case-meta">
+              <span class="badge">Graduate researcher · GIS project manager</span>
+              <span class="mono muted">2024 — 2025</span>
+            </div>
+            <p class="case-summary">
+              The source material was a stack of wartime operational maps: hand-drawn, inconsistently projected and never
+              meant to be analyzed by a computer. I wrote the protocol for georeferencing and digitizing them, managed a
+              remote team of six analysts through production, and built Python workflows that turned their output into
+              a clean spatiotemporal dataset. The result supports questions the paper maps couldn't answer, such as how
+              fast each corridor advanced and where formations bunched up.
+            </p>
+            <dl class="spec">
+              <div><dt>Feature classes</dt><dd>370+</dd></div>
+              <div><dt>Records</dt><dd>~10,000</dd></div>
+              <div><dt>Maps produced</dt><dd>180+</dd></div>
+              <div><dt>Team</dt><dd>6 analysts</dd></div>
+            </dl>
+          </div>
+          <div>
+            <h3 class="case-title case-title-first">Pipeline</h3>
+            <ol class="steps">
+              <li><span class="mono">01</span>Standardized protocol to georeference and digitize WWII-era maps, with QA/QC checks</li>
+              <li><span class="mono">02</span>Vectorized unit paths and operational zones, organized by area of interest and campaign phase</li>
+              <li><span class="mono">03</span>Python and ArcPy automation to process 370+ feature classes consistently</li>
+              <li><span class="mono">04</span>Analytics: divisional clustering, path and average-path generation, and center-of-mass tracking</li>
+              <li><span class="mono">05</span>Published as an interactive ArcGIS Experience and presented at The Dupuy Institute's Historical Analysis Annual Conference</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Digital twin -->
+    <section id="digital-twin" class="section container">
+      <div class="split reveal">
+        <div class="section-head">
+          <p class="eyebrow">02 · Reality capture</p>
+          <h2>A digital twin of Jasper County Airport</h2>
+          <p class="section-sub">
+            As assistant project lead, I helped coordinate 30 students and faculty to capture a full 3D digital twin of
+            a working general aviation airport. I handled survey mission planning, regulatory compliance and the data management plan that kept every capture organized from field to model.
+          </p>
+          <p class="section-sub">
+            The same airport became the site of my flood risk study. The survey showed what the airport looks like; the
+            flood model showed how it behaves in a storm.
+          </p>
+          <a href="index.html#research" class="btn btn-tertiary split-link">See the flood risk study →</a>
+        </div>
+        <ol class="flow">
+          <li><span class="flow-k mono">Plan</span><span>Flight plans, airspace coordination and a compliance plan for operating at an active airport</span></li>
+          <li><span class="flow-k mono">Capture</span><span>30-person UAS survey operation across the airfield</span></li>
+          <li><span class="flow-k mono">Manage</span><span>Naming, storage and handoff standards so every capture was traceable</span></li>
+          <li><span class="flow-k mono">Model</span><span>Processed into a 3D digital twin for planning and future analysis</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Payload engineering -->
+    <section id="payload" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 · Systems engineering</p>
+        <h2>Drone delivery to moving vessels</h2>
+        <p class="section-sub">
+          Senior capstone, Aug 2024 — May 2025. The Great Lakes shipping fleet has no fast way to get small parts and
+          supplies to a ship underway. Our team designed and flight-tested a drone payload release system to
+          deliver them.
+        </p>
+      </div>
+
+      <div class="case reveal">
+        <div class="media-pair">
+          <figure class="video-slot">
+            <video src="assets/video/payload-drop.mp4" muted loop playsinline preload="metadata" controls></video>
+            <figcaption class="mono">Flight test · payload release</figcaption>
+          </figure>
+          <figure class="video-slot">
+            <video src="assets/video/payload-bench.mp4" muted loop playsinline preload="metadata" controls></video>
+            <figcaption class="mono">Bench test · servo pin retention</figcaption>
+          </figure>
+          <a class="video-fallback" href="https://www.linkedin.com/in/gavin-ho-925979239" target="_blank" rel="noopener" hidden>
+            <span class="mono cover-kicker">Flight test footage</span>
+            <span class="cover-title">Watch the payload drop tests</span>
+            <span class="cover-link">View on LinkedIn ↗</span>
+          </a>
+        </div>
+        <div class="case-body">
+          <div>
+            <div class="case-meta">
+              <span class="badge">Mechanical &amp; electrical design lead</span>
+              <span class="mono muted">Purdue UAS capstone</span>
+            </div>
+            <p class="case-summary">
+              I led the mechanical and electrical design of a gravity-based drop mechanism. A servo-actuated pin holds the
+              payload until a long-range wireless command releases it. I modeled the housing in Siemens NX as a modular
+              mount for the DJI Matrice 300, tuned to keep the aircraft's center of gravity stable and isolate the
+              electronics from vibration.
+            </p>
+            <dl class="spec">
+              <div><dt>Airframe</dt><dd>DJI M300</dd></div>
+              <div><dt>Release</dt><dd>Servo pin</dd></div>
+              <div><dt>Control</dt><dd>Arduino</dd></div>
+              <div><dt>Tested range</dt><dd>1.8 mi</dd></div>
+            </dl>
+          </div>
+          <div>
+            <h3 class="case-title case-title-first">Engineering process</h3>
+            <ol class="steps">
+              <li><span class="mono">01</span>Requirements set by the use case: delivering to a vessel that is underway</li>
+              <li><span class="mono">02</span>CAD in Siemens NX, with the modular housing balanced for center of gravity and vibration isolation</li>
+              <li><span class="mono">03</span>Arduino control system with long-range wireless triggering</li>
+              <li><span class="mono">04</span>Bench testing, then iterative flight tests to refine the release</li>
+              <li><span class="mono">05</span>Proof-of-concept deliveries completed at distances over 1.8 miles</li>
+            </ol>
+            <p class="fine">With teammates Dutch Byrd and Ronald Greene.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data & software -->
+    <section id="tools" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 · Data &amp; software</p>
+        <h2>Tools built for the people using them</h2>
+      </div>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="badge">GRYFN Inc.</span>
+            <span class="mono muted">2025 — 2026</span>
+          </div>
+          <h3>Operations tracking application</h3>
+          <p>
+            A full-stack Python desktop app built from scratch on SQLite. It gives the team a structured record of field operations and pulls live GIS weather data into the same view, so planning decisions use current conditions.
+          </p>
+          <ul class="tags"><li>Python</li><li>SQLite</li><li>Weather APIs</li><li>GIS</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="badge">Purdue Plant Sciences</span>
+            <span class="mono muted">2024 — 2025</span>
+          </div>
+          <h3>Research-field mapping at scale</h3>
+          <p>
+            Processed geospatial data across 1,000+ acres of research plots and delivered 100+ high-resolution maps
+            and 3D models to support agricultural and environmental monitoring research.
+          </p>
+          <ul class="tags"><li>Photogrammetry</li><li>ArcGIS Pro</li><li>3D models</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="badge">Hydrology · H&amp;H</span>
+            <span class="mono muted">2024</span>
+          </div>
+          <h3>Calibrated watershed models</h3>
+          <p>
+            For Cedar Creek, a full DEM-to-basin workflow: fill, D8 flow direction, stream ordering and pour-point delineation. For the Chikaskia River, HEC-HMS and HEC-RAS models calibrated against historical storms.
+          </p>
+          <ul class="tags"><li>HEC-HMS</li><li>HEC-RAS</li><li>Spatial Analyst</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="badge">Reusable tooling</span>
+            <span class="mono muted">Ongoing</span>
+          </div>
+          <h3>ModelBuilder &amp; Python toolboxes</h3>
+          <p>
+            Where a task repeats, I package it. Examples include a drainage-line delineation tool validated against
+            Indiana's record rainfall and batch scripts that apply the same QA/QC to every dataset in a project.
+          </p>
+          <ul class="tags"><li>ArcPy</li><li>ModelBuilder</li><li>GDAL</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Interests</p>
+        <h2>What I'm exploring</h2>
+      </div>
+      <div class="interests reveal">
+        <div>
+          <span class="mono">A</span>
+          <h3>Spatial data science</h3>
+          <p>Moving from maps to models, with clustering, movement analysis and statistics on real spatial data.</p>
+        </div>
+        <div>
+          <span class="mono">B</span>
+          <h3>Infrastructure resilience</h3>
+          <p>How flooding and extreme weather stress airports, roads and utilities, and how to plan for it.</p>
+        </div>
+        <div>
+          <span class="mono">C</span>
+          <h3>Historical &amp; strategic analytics</h3>
+          <p>Applying modern GIS methods to archival sources to test long-held assumptions about history.</p>
+        </div>
+        <div>
+          <span class="mono">D</span>
+          <h3>Autonomous systems</h3>
+          <p>Uncrewed aircraft as sensors and delivery platforms, and the data pipelines behind them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APEX UAS -->
+    <section id="apex" class="section container">
+      <div class="apex reveal">
+        <div class="apex-text">
+          <p class="eyebrow">Previously · Sole proprietorship</p>
+          <h2>APEX UAS</h2>
+          <p>
+            Before focusing on geospatial consulting, I ran APEX UAS, a small aerial imaging business based in
+            Plainfield, Indiana. I flew as an FAA Part 107 remote pilot, producing 4K photography and video for
+            local businesses. Over time the work moved toward GIS products: aerial surveys, dashboards and
+            imagery analysis for clients.
+          </p>
+          <ul class="list apex-list">
+            <li><div><strong>Heritage Lake siltation imaging</strong><span>Aerial survey and a dashboard to support the lake's siltation and hydrologic rehabilitation</span></div><span class="mono muted">GIS</span></li>
+            <li><div><strong>African Plum Home &amp; Furniture</strong><span>Commercial and marketing video for a Plainfield, IN business</span></div><span class="mono muted">Video</span></li>
+            <li><div><strong>Sugar Grove Senior Living</strong><span>Promotional video for a Plainfield, IN senior living community</span></div><span class="mono muted">Video</span></li>
+          </ul>
+          <p class="fine">The business has since wound down. Archived footage is on the <a href="https://www.youtube.com/channel/UCaFrmwuQse-BPdZIXVHW69Q" target="_blank" rel="noopener">APEX UAS YouTube channel ↗</a></p>
+        </div>
+        <div class="apex-media">
+          <img class="m-a" src="assets/img/apex-heritage-lake.jpg" alt="Aerial view of Heritage Lake, Indiana, with lakeside homes and farmland" loading="lazy">
+          <img class="m-b" src="assets/img/apex-plainfield-night.jpg" alt="Night aerial of a lit intersection and mixed-use building in Plainfield, Indiana" loading="lazy">
+          <img class="m-c" src="assets/img/apex-utah.jpg" alt="Aerial of a river meander through red rock canyons in Utah" loading="lazy">
+          <button type="button" class="yt m-d" data-id="GRZw6xAWUjU" aria-label="Play 4K drone footage of Heritage Lake, Indiana">
+            <img src="https://i.ytimg.com/vi/GRZw6xAWUjU/hqdefault.jpg" alt="" loading="lazy">
+            <span class="yt-play" aria-hidden="true"></span>
+            <span class="yt-label mono">Heritage Lake · 4K</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="section container">
+      <div class="cta reveal">
+        <div class="cta-bg" aria-hidden="true"></div>
+        <div class="cta-inner">
+          <p class="mono cta-coords">KMDW · Chicago Midway International</p>
+          <h2>Have a spatial problem to solve?</h2>
+          <p>I'm open to consulting projects, collaborations and conversations about geospatial data, automation and aviation planning.</p>
+          <div class="hero-actions">
+            <a href="mailto:gho13322@gmail.com" class="btn btn-inverse">gho13322@gmail.com</a>
+            <a href="https://www.linkedin.com/in/gavin-ho-925979239" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/gavho" class="btn btn-tertiary" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Gavin Ho</span>
+      <span class="muted">Aerial imagery: USGS The National Map · APEX UAS</span>
+      <span class="footer-links">
+        <a href="https://github.com/gavho" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/gavin-ho-925979239" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const io = 'IntersectionObserver' in window && new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('in'));
+
+    // Load the ArcGIS dashboard only when asked, so the page stays fast
+    document.querySelectorAll('.embed').forEach((box) => {
+      box.querySelector('.embed-load').addEventListener('click', () => {
+        const f = document.createElement('iframe');
+        f.src = box.dataset.src;
+        f.title = 'Operation Barbarossa interactive dashboard';
+        f.allow = 'fullscreen';
+        box.replaceChildren(f);
+        box.classList.add('live');
+      });
+    });
+
+    // Click-to-play YouTube, no third-party load until then
+    document.querySelectorAll('.yt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const f = document.createElement('iframe');
+        f.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.id}?autoplay=1&rel=0`;
+        f.title = btn.getAttribute('aria-label');
+        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        f.className = btn.className;
+        btn.replaceWith(f);
+      });
+    });
+
+    // Payload videos live in assets/video/. Until they're added, show a LinkedIn link instead
+    const slots = [...document.querySelectorAll('.video-slot')];
+    let missing = 0;
+    slots.forEach((fig) => {
+      const v = fig.querySelector('video');
+      const fail = () => {
+        if (fig.hidden) return;
+        fig.hidden = true;
+        if (++missing === slots.length) document.querySelector('.video-fallback').hidden = false;
+      };
+      v.addEventListener('error', fail);
+      if (v.error || v.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) fail();
+    });
+  </script>
+</body>
+</html>
