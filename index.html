@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gavin Ho — Geospatial Data &amp; Consulting</title>
-  <meta name="description" content="Gavin Ho is a geospatial data consultant who builds data workflows, automated GIS tools and analytical models for airport and infrastructure clients.">
-  <meta property="og:title" content="Gavin Ho — Geospatial Data & Consulting">
-  <meta property="og:description" content="Data and geospatial solutions for airports and infrastructure.">
+  <title>Gavin Ho — Technical Consulting &amp; Product Development</title>
+  <meta name="description" content="Gavin Ho is a technical consultant and aviation planner working across geospatial data, software development and mechanical engineering, with project leadership experience.">
+  <meta property="og:title" content="Gavin Ho — Technical Consulting & Product Development">
+  <meta property="og:description" content="Data, software and engineering for airports and infrastructure.">
   <meta property="og:image" content="assets/img/ord-aerial.jpg">
   <meta name="theme-color" content="#010102">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235e6ad2'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E">
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/ord-aerial.jpg">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -25,14 +25,19 @@
         <span>Gavin Ho</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#research">Research</a>
-        <a href="work.html">Work</a>
-        <a href="#work">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
+        <a href="#range">Range</a>
+        <a href="#data">Data</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#code">Code</a>
+        <a href="#experience">Experience</a>
+        <a href="work.html">Projects</a>
       </nav>
-      <a href="#contact" class="btn btn-secondary nav-cta">Get in touch</a>
+      <div class="nav-end">
+        <a href="https://github.com/gavho" class="icon-link" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary nav-cta">Get in touch</a>
+      </div>
     </div>
   </header>
 
@@ -42,15 +47,17 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <p class="status reveal"><i aria-hidden="true"></i>Geospatial data &amp; consulting · Chicago, IL</p>
-        <h1 class="reveal">Data and geospatial solutions <br>for airports and infrastructure.</h1>
+        <p class="status reveal"><i aria-hidden="true"></i>Technical consulting &amp; product development · Chicago, IL</p>
+        <h1 class="reveal">Data, software and engineering for complex infrastructure.</h1>
         <p class="lead reveal">
-          I consult with clients to turn complex spatial data into clear decisions, building data workflows,
-          automated GIS tools and analytical models, with a focus on aviation.
+          I'm an aviation planner and technical consultant. I lead projects from requirements to delivery, and I build
+          what goes into them: geospatial data pipelines, full-stack tools and mechanical designs, from airport flood
+          models to aerospace component QA.
         </p>
         <div class="hero-actions reveal">
-          <a href="#research" class="btn btn-primary">View my work</a>
-          <a href="#contact" class="btn btn-secondary">Work with me</a>
+          <a href="#range" class="btn btn-primary">See my range</a>
+          <a href="https://github.com/gavho" class="btn btn-secondary" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="#contact" class="btn btn-tertiary">Work with me →</a>
         </div>
       </div>
       <p class="hero-caption mono">
@@ -59,185 +66,302 @@
       </p>
     </section>
 
-    <!-- Stats -->
+    <!-- Profile bar -->
     <section class="container stats-wrap">
       <dl class="stats reveal">
         <div><dt>Current role</dt><dd>Aviation Planner<span>R.M. Chin &amp; Associates</span></dd></div>
-        <div><dt>Focus</dt><dd>Spatial data science<span>Geospatial workflows &amp; automation</span></dd></div>
+        <div><dt>Disciplines</dt><dd>Data · Dev · Engineering<span>Consulting &amp; product development</span></dd></div>
+        <div><dt>Leadership</dt><dd>Led a 6-analyst team<span>Operation Barbarossa, Purdue FORCES</span></dd></div>
         <div><dt>Education</dt><dd>Purdue University<span>B.S. · Graduate Certificate, GIS</span></dd></div>
-        <div><dt>Clients</dt><dd>Airports &amp; infrastructure<span>Planning and consulting</span></dd></div>
       </dl>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="section container">
+    <!-- Technical range -->
+    <section id="range" class="section container">
       <div class="section-head reveal">
-        <p class="eyebrow">What I do</p>
-        <h2>Solutions I build for clients</h2>
-        <p class="section-sub">From raw data to a decision-ready deliverable: I scope the problem with the client, build the data workflow and hand it off documented and reproducible.</p>
+        <p class="eyebrow">Technical range</p>
+        <h2>One consultant, three disciplines</h2>
+        <p class="section-sub">
+          Clients rarely have a problem that fits one field. My background spans the data, the software and the hardware,
+          so I can take a project from the first requirement to a working deliverable without handing it off halfway.
+        </p>
       </div>
-      <div class="services">
-        <article class="card reveal">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg>
-          </div>
-          <h3>Geospatial data workflows &amp; automation</h3>
-          <p>Python tools, ETL pipelines and database-backed applications that replace manual, repetitive GIS work with documented, reproducible workflows.</p>
-          <ul class="tags"><li>Python</li><li>ArcPy</li><li>GDAL</li><li>SQL</li></ul>
-        </article>
-        <article class="card reveal">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 17c3 0 3-2 6-2s3 2 6 2 3-2 6-2M3 12c3 0 3-2 6-2s3 2 6 2 3-2 6-2M12 3v4"/></svg>
-          </div>
-          <h3>Spatial analysis &amp; modeling</h3>
-          <p>Data-driven analysis of terrain, hydrology and hazard risk that quantifies exposure, compares scenarios and tests mitigation options before anything is built.</p>
-          <ul class="tags"><li>ArcGIS Pro</li><li>HEC-HMS</li><li>HEC-RAS</li><li>Spatial statistics</li></ul>
-        </article>
-        <article class="card reveal">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M2 16l20-8M6 21l4-7M14 10l4-7M4 12h4M16 12h4"/></svg>
-          </div>
-          <h3>Aviation &amp; infrastructure consulting</h3>
-          <p>Technical support for airport planning engagements, including asset data management, CAD-GIS integration and site suitability and vulnerability studies.</p>
-          <ul class="tags"><li>ArcGIS Enterprise</li><li>AutoCAD</li><li>Revit</li></ul>
-        </article>
+      <div class="range">
+        <a class="range-panel reveal" href="#data" style="--scene: url('assets/bg/pointcloud.svg'); --tint: 45, 212, 191">
+          <span class="range-k mono">01 · Data</span>
+          <h3>Spatial data &amp; analytics</h3>
+          <p>Models and datasets that turn raw terrain, imagery and archives into decisions.</p>
+          <ul>
+            <li>Airport flood simulation on a 2.5 m DEM</li>
+            <li>370+ feature classes analyzed in Python</li>
+            <li>1,000+ acres mapped for research</li>
+            <li>Calibrated HEC-HMS / HEC-RAS models</li>
+          </ul>
+          <span class="range-go">Data work →</span>
+        </a>
+        <a class="range-panel reveal" href="#code" style="--scene: url('assets/bg/codemap.svg'); --tint: 130, 143, 255">
+          <span class="range-k mono">02 · Development</span>
+          <h3>Software &amp; automation</h3>
+          <p>Full-stack tools that replace spreadsheets and repetitive work with reliable systems.</p>
+          <ul>
+            <li>UAS operations manager (PyQt + SpatiaLite)</li>
+            <li>Airport CIP and ORAT planning tools</li>
+            <li>AI-assisted builds with agents and MCP</li>
+            <li>Beat-synced lighting from DJ software</li>
+          </ul>
+          <span class="range-go">Code →</span>
+        </a>
+        <a class="range-panel reveal" href="#engineering" style="--scene: url('assets/bg/blueprint.svg'); --tint: 96, 165, 250">
+          <span class="range-k mono">03 · Engineering</span>
+          <h3>Mechanical design &amp; QA</h3>
+          <p>Hardware designed, drawn, built and inspected to spec.</p>
+          <ul>
+            <li>Belcan internship on Rolls-Royce programs</li>
+            <li>V-22 Osprey stator blade QA/QC review</li>
+            <li>Drone payload systems at GRYFN and Purdue</li>
+            <li>Parts designed by me, then manufactured</li>
+          </ul>
+          <span class="range-go">Engineering →</span>
+        </a>
       </div>
     </section>
 
-    <!-- Featured research -->
-    <section id="research" class="section container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Featured research</p>
-        <h2>Flood risk at rural airports</h2>
-        <p class="section-sub">Modeling flooding and drainage mitigation at Jasper County Airport, a general aviation field in Rensselaer, Indiana.</p>
-      </div>
-
-      <div class="case reveal">
-        <a class="case-hero" href="https://arcg.is/1OrvXn0" target="_blank" rel="noopener" aria-label="Open the Rainfall and Runways StoryMap">
-          <img src="assets/img/storymap-cover.jpg" alt="Airliner tail beside a flooded airport ramp as a truck drives through standing water" loading="lazy">
-          <span class="cover-panel">
-            <span class="mono cover-kicker">ArcGIS StoryMap · Gavin Ho</span>
-            <span class="cover-title">Rainfall and Runways</span>
-            <span class="cover-sub">A Deep Dive into Flood Risks at Rural Airports</span>
-            <span class="cover-link">Read the story ↗</span>
-          </span>
-        </a>
-        <div class="case-body">
+    <!-- Project leadership -->
+    <section id="leadership" class="scene" style="--scene: url('assets/bg/opsmap.svg'); --tint: 130, 143, 255">
+      <div class="container">
+        <div class="lead-band reveal">
           <div>
-            <div class="case-meta">
-              <span class="badge">ArcGIS Pro 3.3 · Flood simulation</span>
-              <span class="mono muted">Sep — Dec 2024</span>
-            </div>
-            <p class="case-summary">
-              Rural airports rarely have advanced drainage, and even 3 mm of standing water can cause aquaplaning.
-              I simulated historical and record rainfall events on a 2.5 m terrain model to find where water
-              collects on runways, taxiways and aprons. I then designed and tested drainage mitigation directly in the DEM.
+            <p class="eyebrow">Project leadership</p>
+            <h2>Running a research program like a client engagement</h2>
+            <p class="section-sub">
+              For Purdue's FORCES Initiative I managed the geospatial reconstruction of Operation Barbarossa (1941). I
+              scoped the work with faculty authors, wrote the data protocol, led a remote team of six analysts and
+              delivered an interactive dashboard presented at The Dupuy Institute's Historical Analysis Annual Conference.
             </p>
-            <h3 class="case-title">Risks identified</h3>
-            <ul class="chips">
-              <li>Runway hydroplaning</li><li>Taxiway traction loss</li><li>Fuel station contamination</li>
-              <li>Grass runway softening</li><li>Hangar &amp; apron access</li><li>Emergency road access</li>
-            </ul>
+            <dl class="spec">
+              <div><dt>Team</dt><dd>6 analysts</dd></div>
+              <div><dt>Feature classes</dt><dd>370+</dd></div>
+              <div><dt>Records</dt><dd>~10,000</dd></div>
+              <div><dt>Maps</dt><dd>180+</dd></div>
+            </dl>
+            <div class="hero-actions">
+              <a href="work.html#forces" class="btn btn-primary">Explore the dashboard</a>
+              <a href="https://github.com/gavho/OP-Barbarossa" class="btn btn-tertiary" target="_blank" rel="noopener">Project code ↗</a>
+            </div>
           </div>
-          <div>
-            <h3 class="case-title case-title-first">Approach</h3>
-            <ol class="steps">
-              <li><span class="mono">01</span>Baseline model of a real 2018 storm (2.67 in over 1.5 hr) from NOAA records</li>
-              <li><span class="mono">02</span>Time-series and back-to-back rainfall runs, using each depth raster as the next baseline</li>
-              <li><span class="mono">03</span>SSURGO soil infiltration (clay loam vs. sandy loam) folded into the model</li>
-              <li><span class="mono">04</span>A reusable ModelBuilder tool for drainage-line delineation, validated against Indiana's record 2.7 in/hr event</li>
-              <li><span class="mono">05</span>Proposed 12 m drainage ditches carved into the DEM with Euclidean Distance to redirect flow</li>
-            </ol>
-          </div>
+          <ol class="flow">
+            <li><span class="flow-k mono">Scope</span><span>Requirements set with faculty authors and translated into a data model</span></li>
+            <li><span class="flow-k mono">Standardize</span><span>A written protocol for georeferencing and digitizing WWII-era maps</span></li>
+            <li><span class="flow-k mono">Delegate</span><span>Work packages assigned to a remote team, with progress tracked weekly</span></li>
+            <li><span class="flow-k mono">Automate</span><span>Python workflows for clustering, path generation and center-of-mass analysis</span></li>
+            <li><span class="flow-k mono">QA/QC</span><span>Consistent checks on every dataset before it entered the analysis</span></li>
+            <li><span class="flow-k mono">Deliver</span><span>Live ArcGIS dashboard, map series and conference presentation</span></li>
+          </ol>
         </div>
       </div>
+    </section>
 
-      <!-- More research -->
-      <div class="grid more">
-        <article class="card reveal">
-          <div class="card-top">
-            <span class="badge">FORCES Initiative · Lead</span>
-            <span class="mono muted">2025</span>
+    <!-- Data work -->
+    <section id="data" class="scene" style="--scene: url('assets/bg/contours.svg'); --tint: 45, 212, 191">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Data work</p>
+          <h2>Flood risk at rural airports</h2>
+          <p class="section-sub">Modeling flooding and drainage mitigation at Jasper County Airport, a general aviation field in Rensselaer, Indiana.</p>
+        </div>
+
+        <div class="case reveal">
+          <a class="case-hero" href="https://arcg.is/1OrvXn0" target="_blank" rel="noopener" aria-label="Open the Rainfall and Runways StoryMap">
+            <img src="assets/img/storymap-cover.jpg" alt="Airliner tail beside a flooded airport ramp as a truck drives through standing water" loading="lazy">
+            <span class="cover-panel">
+              <span class="mono cover-kicker">ArcGIS StoryMap · Gavin Ho</span>
+              <span class="cover-title">Rainfall and Runways</span>
+              <span class="cover-sub">A Deep Dive into Flood Risks at Rural Airports</span>
+              <span class="cover-link">Read the story ↗</span>
+            </span>
+          </a>
+          <div class="case-body">
+            <div>
+              <div class="case-meta">
+                <span class="badge">ArcGIS Pro 3.3 · Flood simulation</span>
+                <span class="mono muted">Sep — Dec 2024</span>
+              </div>
+              <p class="case-summary">
+                Rural airports rarely have advanced drainage, and even 3 mm of standing water can cause aquaplaning.
+                I simulated historical and record rainfall events on a 2.5 m terrain model to find where water
+                collects on runways, taxiways and aprons. I then designed and tested drainage mitigation directly in the DEM.
+              </p>
+              <h3 class="case-title">Risks identified</h3>
+              <ul class="chips">
+                <li>Runway hydroplaning</li><li>Taxiway traction loss</li><li>Fuel station contamination</li>
+                <li>Grass runway softening</li><li>Hangar &amp; apron access</li><li>Emergency road access</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="case-title case-title-first">Approach</h3>
+              <ol class="steps">
+                <li><span class="mono">01</span>Baseline model of a real 2018 storm (2.67 in over 1.5 hr) from NOAA records</li>
+                <li><span class="mono">02</span>Time-series and back-to-back rainfall runs, using each depth raster as the next baseline</li>
+                <li><span class="mono">03</span>SSURGO soil infiltration (clay loam vs. sandy loam) folded into the model</li>
+                <li><span class="mono">04</span>A reusable ModelBuilder tool for drainage-line delineation, validated against Indiana's record 2.7 in/hr event</li>
+                <li><span class="mono">05</span>Proposed 12 m drainage ditches carved into the DEM with Euclidean Distance to redirect flow</li>
+              </ol>
+            </div>
           </div>
-          <h3>Operation Barbarossa (1941)</h3>
-          <p>
-            A digital geospatial reconstruction of Germany's 1941 invasion of the Soviet Union. I led a remote team of six analysts
-            who produced 180+ maps, and I wrote Python workflows to process 370+ feature classes (~10k records) using clustering,
-            path generation and center-of-mass analysis. Presented at The Dupuy Institute's Historical Analysis Annual Conference.
-          </p>
-          <ul class="tags"><li>Python</li><li>ArcPy</li><li>QA/QC</li><li>Team lead</li></ul>
-          <a class="card-link" href="work.html#forces">Explore the interactive dashboard →</a>
-        </article>
-        <article class="card reveal">
-          <div class="card-top">
-            <span class="badge">Hydrology · H&amp;H</span>
-            <span class="mono muted">Aug — Dec 2024</span>
-          </div>
-          <h3>Chikaskia River Hydrologic Analysis</h3>
-          <p>
-            A watershed study combining hydrologic and hydraulic models. I calibrated HEC-HMS and HEC-RAS against two historical
-            storms and a 100-year event to assess flood risk, and showed why calibration matters for mitigation planning.
-          </p>
-          <ul class="tags"><li>HEC-HMS</li><li>HEC-RAS</li><li>Calibration</li></ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-top">
-            <span class="badge">Software · GRYFN</span>
-            <span class="mono muted">2025</span>
-          </div>
-          <h3>Operations Tracking Desktop App</h3>
-          <p>
-            A full-stack Python desktop application, built from scratch, for tracking field operations. It runs on an SQLite
-            database and integrates real-time GIS weather data and map visualization to support operational planning.
-          </p>
-          <ul class="tags"><li>Python</li><li>SQLite</li><li>Weather APIs</li></ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-top">
-            <span class="badge">Terrain analysis</span>
-            <span class="mono muted">Sep 2024</span>
-          </div>
-          <h3>Cedar Creek Watershed Delineation</h3>
-          <p>
-            A complete stream network and watershed workflow for Cedar Creek in northwest Indiana: DEM fill, D8 flow direction
-            and accumulation, stream ordering, flow length and pour-point basin delineation.
-          </p>
-          <ul class="tags"><li>Spatial Analyst</li><li>D8</li><li>ArcGIS Pro</li></ul>
-        </article>
+        </div>
+
+        <div class="grid more">
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Hydrology · H&amp;H</span><span class="mono muted">Aug — Dec 2024</span></div>
+            <h3>Chikaskia River Hydrologic Analysis</h3>
+            <p>A watershed study combining hydrologic and hydraulic models. I calibrated HEC-HMS and HEC-RAS against two historical storms and a 100-year event, and showed why calibration matters for mitigation planning.</p>
+            <ul class="tags"><li>HEC-HMS</li><li>HEC-RAS</li><li>Calibration</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Remote sensing</span><span class="mono muted">2024 — 2025</span></div>
+            <h3>Research-field mapping at scale</h3>
+            <p>For Purdue's Department of Plant Sciences, I processed geospatial data across 1,000+ acres of research plots, producing 100+ high-resolution maps and 3D models for agricultural and environmental monitoring.</p>
+            <ul class="tags"><li>Photogrammetry</li><li>ArcGIS Pro</li><li>3D models</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Reality capture</span><span class="mono muted">Oct — Nov 2024</span></div>
+            <h3>Airport Digital Twin Survey</h3>
+            <p>As assistant project lead, I helped coordinate 30 students and faculty to survey Jasper County Airport for a 3D digital twin. I owned mission planning, regulatory compliance and data management.</p>
+            <ul class="tags"><li>Survey planning</li><li>Data management</li><li>3D</li></ul>
+            <a class="card-link" href="work.html#digital-twin">Read more →</a>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Terrain analysis</span><span class="mono muted">Sep 2024</span></div>
+            <h3>Cedar Creek Watershed Delineation</h3>
+            <p>A complete stream network and watershed workflow for Cedar Creek in northwest Indiana: DEM fill, D8 flow direction and accumulation, stream ordering, flow length and pour-point basin delineation.</p>
+            <ul class="tags"><li>Spatial Analyst</li><li>D8</li><li>ArcGIS Pro</li></ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Beyond aviation -->
-    <section class="section container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Beyond aviation</p>
-        <h2>Where else I apply the toolkit</h2>
-        <p class="section-sub">Historical data science, reality capture and hardware engineering. The same approach works on very different problems.</p>
+    <!-- Engineering -->
+    <section id="engineering" class="scene scene-blueprint" style="--scene: url('assets/bg/blueprint.svg'); --tint: 96, 165, 250">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Engineering &amp; product development</p>
+          <h2>From CAD model to manufactured part</h2>
+          <p class="section-sub">
+            Before my work moved toward data and consulting, I trained as an engineer. I've designed parts that went to
+            manufacturing, built and flight-tested payload hardware, and reviewed aerospace components against spec.
+          </p>
+        </div>
+
+        <article class="feature reveal">
+          <div class="feature-head">
+            <span class="badge">Engineering internship</span>
+            <span class="mono muted">Belcan · supporting Rolls-Royce</span>
+          </div>
+          <h3>Aerospace engine programs</h3>
+          <div class="feature-body">
+            <div>
+              <span class="mono feature-k">F130 · B-52</span>
+              <p>Supported design work on the Rolls-Royce F130, the engine selected to re-engine the U.S. Air Force B-52 fleet.</p>
+            </div>
+            <div>
+              <span class="mono feature-k">V-22 Osprey</span>
+              <p>Performed QA/QC review of engine stator blades for the V-22 Osprey, checking components and documentation against engineering requirements.</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="grid eng-grid">
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">GRYFN Inc.</span><span class="mono muted">Intern → full-time</span></div>
+            <h3>UAS sensor integration hardware</h3>
+            <p>Designed mounts and integration hardware in CAD for drone-based remote sensing systems, translating mission needs into parts that could be built and flown.</p>
+            <ul class="tags"><li>CAD</li><li>3D printing</li><li>Integration</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Purdue capstone</span><span class="mono muted">2024 — 2025</span></div>
+            <h3>Payload release for moving vessels</h3>
+            <p>Led mechanical and electrical design of a servo-actuated drop system for the DJI Matrice 300. I modeled it in Siemens NX, wired an Arduino wireless trigger and flight-tested it at distances over 1.8 miles.</p>
+            <ul class="tags"><li>Siemens NX</li><li>Arduino</li><li>Flight test</li></ul>
+            <a class="card-link" href="work.html#payload">See the build →</a>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Design for manufacturing</span><span class="mono muted">Drawings</span></div>
+            <h3>Parts designed, drawn and made</h3>
+            <p>Produced engineering drawings that were used to manufacture parts I designed, with the dimensions and tolerances needed for fabrication, backed by formal training in engineering drawings for manufacturing.</p>
+            <ul class="tags"><li>Mechanical drawings</li><li>Tolerancing</li><li>Inventor</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="badge">Inspection</span><span class="mono muted">ASNT</span></div>
+            <h3>Non-destructive testing</h3>
+            <p>Certified NDT Level II in magnetic particle and liquid penetrant testing, plus Level I eddy current. That training shapes how I think about defects, tolerances and QA.</p>
+            <ul class="tags"><li>MT</li><li>PT</li><li>ET</li><li>QA/QC</li></ul>
+          </article>
+        </div>
+
+        <div class="bench reveal">
+          <span class="mono bench-k">On the bench</span>
+          <ul class="tags">
+            <li>Siemens NX</li><li>Autodesk Inventor</li><li>AutoCAD</li><li>3D design &amp; printing</li><li>Soldering</li>
+            <li>Arduino</li><li>Mechanical drawings</li><li>NDT</li>
+          </ul>
+          <span class="bench-note">Foundation: Project Lead The Way (PLTW) engineering pathway in high school</span>
+        </div>
       </div>
-      <div class="teaser">
-        <a class="card reveal" href="work.html#forces">
-          <div class="card-top"><span class="badge">Purdue FORCES Initiative</span><span class="mono muted">Dashboard</span></div>
-          <h3>Operation Barbarossa, as data</h3>
-          <p>WWII operational maps turned into a spatiotemporal dataset and a live ArcGIS dashboard.</p>
-          <span class="card-link">View project →</span>
-        </a>
-        <a class="card reveal" href="work.html#payload">
-          <div class="card-top"><span class="badge">Systems engineering</span><span class="mono muted">Capstone</span></div>
-          <h3>Drone delivery to moving vessels</h3>
-          <p>A servo-actuated payload release for the DJI M300, flight-tested at distances over 1.8 miles.</p>
-          <span class="card-link">View project →</span>
-        </a>
-        <a class="card reveal" href="work.html#digital-twin">
-          <div class="card-top"><span class="badge">Reality capture</span><span class="mono muted">30-person team</span></div>
-          <h3>Airport digital twin</h3>
-          <p>Planning and data management for a 3D digital twin of Jasper County Airport.</p>
-          <span class="card-link">View project →</span>
-        </a>
+    </section>
+
+    <!-- Code -->
+    <section id="code" class="scene scene-code" style="--scene: url('assets/bg/codemap.svg'); --tint: 130, 143, 255">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Code</p>
+          <h2>Selected repositories</h2>
+          <p class="section-sub">
+            Public work on GitHub. Most of my consulting software is internal to clients, including airport CIP
+            prioritization, ORAT program tracking and a deck generator.
+          </p>
+        </div>
+        <div class="repos">
+          <a class="repo card reveal" href="https://github.com/gavho/UAS-Operations-Manager" target="_blank" rel="noopener">
+            <span class="repo-name mono">UAS-Operations-Manager</span>
+            <p>All-in-one flight operations, fleet and sensor tracking app with a SQLite / SpatiaLite geospatial database, automated backups and schema migrations.</p>
+            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · PyQt</span>
+          </a>
+          <a class="repo card reveal" href="https://github.com/gavho/OP-Barbarossa" target="_blank" rel="noopener">
+            <span class="repo-name mono">OP-Barbarossa</span>
+            <p>Analysis code and scripts from the Operation Barbarossa research project: clustering, path generation and center-of-mass workflows.</p>
+            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · ArcPy</span>
+          </a>
+          <a class="repo card reveal" href="https://github.com/gavho/rkbx_govee_link" target="_blank" rel="noopener">
+            <span class="repo-name mono">rkbx_govee_link</span>
+            <p>Connects rekordbox to Govee smart bulbs so lights follow a live DJ set, with Python scripts for custom settings and effects.</p>
+            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · IoT</span>
+          </a>
+          <a class="repo card reveal" href="https://github.com/gavho/GIS-Scripts" target="_blank" rel="noopener">
+            <span class="repo-name mono">GIS-Scripts</span>
+            <p>GIS scripts and workarounds for geoprocessing tools that are locked behind higher Esri license levels.</p>
+            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · GIS</span>
+          </a>
+          <a class="repo card reveal" href="https://github.com/gavho/SQLite-DB-Editor" target="_blank" rel="noopener">
+            <span class="repo-name mono">SQLite-DB-Editor</span>
+            <p>A lightweight browser for opening and editing SQLite databases directly, with schema error flagging across tables.</p>
+            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python</span>
+          </a>
+          <a class="repo card reveal" href="https://github.com/gavho/Flight-Tracker" target="_blank" rel="noopener">
+            <span class="repo-name mono">Flight-Tracker</span>
+            <p>The PyQt5 prototype that grew into the operations manager: mission forms, live database editing and planned METAR weather autofill.</p>
+            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · PyQt5</span>
+          </a>
+        </div>
+        <div class="repo-foot reveal">
+          <a href="https://github.com/gavho" class="btn btn-secondary" target="_blank" rel="noopener">View all on GitHub ↗</a>
+          <span class="mono muted">github.com/gavho</span>
+        </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="work" class="section container">
+    <section id="experience" class="scene" style="--scene: url('assets/bg/routes.svg'); --tint: 94, 106, 210">
+      <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Experience</p>
         <h2>Where I've worked</h2>
@@ -257,15 +381,15 @@
           <div class="row-body">
             <h3>GIS Analyst &amp; Developer</h3>
             <p class="org">GRYFN Inc. · West Lafayette, IN</p>
-            <p>Led full-stack development of a Python and SQLite operations-tracking application with live GIS weather integration, translating operational needs into software and data solutions.</p>
+            <p>Started as an intern and grew into a full-time role at a remote sensing startup. Led full-stack development of a Python and SQLite operations app with live GIS weather integration, and designed CAD hardware for sensor system integration.</p>
           </div>
         </li>
         <li class="row reveal">
           <div class="row-meta mono">2025</div>
           <div class="row-body">
             <h3>GIS Analyst / Consultant &amp; GIS Project Manager</h3>
-            <p class="org">Purdue University · College of Liberal Arts &amp; Research</p>
-            <p>Led a six-analyst consulting team on the Operation Barbarossa project. Built standardized data acquisition workflows, automated analysis in Python and served as the client liaison between authors, faculty and analysts.</p>
+            <p class="org">Purdue University · College of Liberal Arts, FORCES Initiative</p>
+            <p>Led a six-analyst team on the Operation Barbarossa project. Built standardized data acquisition workflows, automated analysis in Python and served as the liaison between authors, faculty and analysts.</p>
           </div>
         </li>
         <li class="row reveal">
@@ -276,7 +400,161 @@
             <p>Processed and analyzed geospatial data across 1,000+ acres of research fields, producing 100+ high-resolution maps and 3D models for agricultural and environmental monitoring.</p>
           </div>
         </li>
+        <li class="row reveal">
+          <div class="row-meta mono">Internship</div>
+          <div class="row-body">
+            <h3>Engineering Intern</h3>
+            <p class="org">Belcan · supporting Rolls-Royce · Indianapolis, IN</p>
+            <p>Supported design work on the Rolls-Royce F130 engine for the B-52 and performed QA/QC review of V-22 Osprey engine stator blades.</p>
+          </div>
+        </li>
+        <li class="row reveal">
+          <div class="row-meta mono">Founder</div>
+          <div class="row-body">
+            <h3>Owner &amp; Remote Pilot</h3>
+            <p class="org">APEX UAS (sole proprietorship) · Plainfield, IN</p>
+            <p>Ran a small aerial imaging business delivering 4K photo and video, aerial surveys and GIS dashboards for local clients. <a class="inline-link" href="work.html#apex">More →</a></p>
+          </div>
+        </li>
       </ol>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="skills" class="scene" style="--scene: url('assets/bg/circuit.svg'); --tint: 130, 143, 255">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Skills and software</h2>
+          <p class="section-sub">Data and development at the core, backed by hands-on engineering and AI-assisted delivery.</p>
+        </div>
+
+        <div class="caps">
+          <article class="card cap reveal">
+            <div class="cap-head"><h3>Geospatial &amp; remote sensing</h3><span class="mono">01</span></div>
+            <p>Analysis, cartography and web GIS, from raw imagery and LiDAR to published dashboards.</p>
+            <ul>
+              <li>ArcGIS Pro<span>Spatial Analyst · ModelBuilder</span></li>
+              <li>ArcGIS Online &amp; Enterprise<span>Experience Builder · StoryMaps</span></li>
+              <li>QGIS<span>Open-source workflows</span></li>
+              <li>LiDAR &amp; photogrammetry<span>RGB aerial surveys · 3D models</span></li>
+              <li>Spatial analytics<span>Network · clustering · deep learning</span></li>
+            </ul>
+          </article>
+          <article class="card cap reveal">
+            <div class="cap-head"><h3>Data &amp; software</h3><span class="mono">02</span></div>
+            <p>Pipelines, databases and apps that turn repeatable work into tools.</p>
+            <ul>
+              <li>Python<span>ArcPy · GDAL · PyQt · ETL</span></li>
+              <li>SQL<span>SQLite · SpatiaLite · schema design</span></li>
+              <li>Web apps<span>React · TypeScript · Vite · Tailwind</span></li>
+              <li>Data apps<span>Streamlit · Altair</span></li>
+              <li>C++ &amp; HTML/CSS/JS<span>Interactive HTML reports</span></li>
+            </ul>
+          </article>
+          <article class="card cap reveal">
+            <div class="cap-head"><h3>AI &amp; automation</h3><span class="mono">03</span></div>
+            <p>Using AI agents to build and maintain real tools, with clear specs and data boundaries.</p>
+            <ul>
+              <li>Agentic development<span>Claude Code</span></li>
+              <li>Model Context Protocol<span>MCP server integrations</span></li>
+              <li>Agent skills<span>Reusable, versioned workflows</span></li>
+              <li>Context engineering<span>PRDs · design-system specs</span></li>
+              <li>Privacy-first AI<span>Client data stays local</span></li>
+            </ul>
+          </article>
+          <article class="card cap reveal">
+            <div class="cap-head"><h3>Mechanical &amp; electrical</h3><span class="mono">04</span></div>
+            <p>Hardware that has to work: CAD, drawings, prototyping and embedded control.</p>
+            <ul>
+              <li>Siemens NX &amp; Inventor<span>Parametric parts · assemblies</span></li>
+              <li>Mechanical drawings<span>Drawings for manufacturing</span></li>
+              <li>3D design &amp; printing<span>Rapid prototyping</span></li>
+              <li>Soldering &amp; electronics<span>Arduino · servos · wireless</span></li>
+              <li>AutoCAD &amp; Revit<span>Drafting · BIM · CAD-GIS</span></li>
+            </ul>
+          </article>
+          <article class="card cap reveal">
+            <div class="cap-head"><h3>Modeling &amp; analysis</h3><span class="mono">05</span></div>
+            <p>Physical and statistical models that quantify risk before decisions are made.</p>
+            <ul>
+              <li>HEC-HMS<span>Hydrologic modeling</span></li>
+              <li>HEC-RAS<span>Hydraulic modeling</span></li>
+              <li>Terrain &amp; DEM analysis<span>D8 · watershed delineation</span></li>
+              <li>Predictive modeling<span>Rainfall scenario simulation</span></li>
+              <li>Weather data<span>Computational weather modeling</span></li>
+            </ul>
+          </article>
+          <article class="card cap reveal">
+            <div class="cap-head"><h3>Leadership &amp; delivery</h3><span class="mono">06</span></div>
+            <p>The project discipline that turns technical work into a finished deliverable.</p>
+            <ul>
+              <li>Project management<span>Teams of 6 to 30</span></li>
+              <li>Client liaison<span>Requirements · stakeholder updates</span></li>
+              <li>Airport planning<span>CIP · ORAT · infrastructure</span></li>
+              <li>QA/QC<span>Aerospace parts · data · NDT Level II</span></li>
+              <li>UAS operations<span>FAA Part 107</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="ai reveal">
+          <div class="ai-text">
+            <p class="eyebrow">AI-native workflow</p>
+            <h3>Building with agents, not just chatbots</h3>
+            <p>
+              I use AI coding agents as part of my engineering process. The agent works from a written spec and
+              connects to the tools I already use through the Model Context Protocol. I review every change.
+              This is how I ship planning tools quickly without handing client data to a model.
+            </p>
+          </div>
+          <ol class="pipeline">
+            <li><span class="node">SPEC</span><strong>Define</strong><span>PRD, data schema and design system written first as agent context</span></li>
+            <li><span class="node">MCP</span><strong>Connect</strong><span>Agent reaches GitHub, Figma and document stores through MCP servers</span></li>
+            <li><span class="node">AGT</span><strong>Build</strong><span>Claude Code implements, runs self-tests and renders previews</span></li>
+            <li><span class="node">QA</span><strong>Review</strong><span>Human review, headless browser checks and version control before release</span></li>
+          </ol>
+          <ul class="tags ai-stack">
+            <li>Claude Code</li><li>MCP</li><li>Agent skills</li><li>Prompt &amp; context design</li><li>Headless test automation</li><li>Git / GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side projects -->
+    <section id="off-hours" class="scene scene-rgb" style="--scene: url('assets/bg/spectrum.svg'); --tint: 177, 61, 255">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Off the clock</p>
+          <h2>Side projects</h2>
+          <p class="section-sub">What I build for fun. Each one is still an excuse to wire, script or reverse-engineer something.</p>
+        </div>
+        <div class="fun">
+          <article class="card fun-card reveal">
+            <span class="fun-k mono">DJ · rekordbox</span>
+            <h3>DJing</h3>
+            <p>I mix with rekordbox. It's also where my interest in timing, beat data and live systems shows up.</p>
+          </article>
+          <article class="card fun-card reveal">
+            <span class="fun-k mono">Python · IoT · RGB</span>
+            <h3>Programmable RGB lighting</h3>
+            <p>
+              I wrote <a class="inline-link" href="https://github.com/gavho/rkbx_govee_link" target="_blank" rel="noopener">rkbx_govee_link</a>,
+              which reads live data from rekordbox and drives Govee smart bulbs, so the room lights follow the set with custom effects.
+            </p>
+          </article>
+          <article class="card fun-card reveal">
+            <span class="fun-k mono">Games · scripting</span>
+            <h3>Video game modding</h3>
+            <p>I mod PC games: editing configs, assets and scripts to change how they look and play. It was my first way into reading other people's code.</p>
+          </article>
+          <article class="card fun-card reveal">
+            <span class="fun-k mono">Maker · 3D print</span>
+            <h3>Builds &amp; prototypes</h3>
+            <p>I design and 3D print parts at home and solder small electronics. It's the same toolkit I use at work, applied to my own ideas.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- About -->
@@ -287,117 +565,19 @@
           <p class="eyebrow">About</p>
           <h2>Hi, I'm Gavin.</h2>
           <p class="about-text">
-            I'm a geospatial data consultant who works where data meets infrastructure. I studied at Purdue,
-            where I earned a B.S. and a Graduate Certificate in Geospatial Information Science. Along the way I learned that
-            the most useful analysis is one that helps someone make a decision. Today I bring that mindset to aviation
-            consulting in Chicago, building data workflows and technical solutions that help airport clients plan for what's next.
+            I'm a technical professional working in product development and consulting. My roots are in engineering: PLTW in
+            high school, then aerospace QA/QC at Belcan and drone hardware at Purdue and GRYFN. From there my work moved into
+            data and software, and I earned a B.S. and a Graduate Certificate in Geospatial Information Science at Purdue.
+          </p>
+          <p class="about-text">
+            Today I consult on aviation planning in Chicago. I lead projects, and I build the data pipelines, tools and
+            analysis inside them. Clients get a single person who understands the problem from requirements through delivery.
           </p>
           <div class="hero-actions">
             <a href="#skills" class="btn btn-secondary">Full skill set</a>
-            <a href="work.html" class="btn btn-tertiary">Selected work →</a>
+            <a href="work.html" class="btn btn-tertiary">All projects →</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="rule" aria-hidden="true"></div>
-
-    <!-- Capabilities -->
-    <section id="skills" class="section container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Capabilities</p>
-        <h2>Skills and software</h2>
-        <p class="section-sub">A spatial analyst's core, with software engineering, mechanical design and AI-assisted development built around it.</p>
-      </div>
-
-      <div class="caps">
-        <article class="card cap reveal">
-          <div class="cap-head"><h3>Geospatial &amp; remote sensing</h3><span class="mono">01</span></div>
-          <p>Analysis, cartography and web GIS, from raw imagery and LiDAR to published dashboards.</p>
-          <ul>
-            <li>ArcGIS Pro<span>Spatial Analyst · ModelBuilder</span></li>
-            <li>ArcGIS Online &amp; Enterprise<span>Experience Builder · StoryMaps</span></li>
-            <li>QGIS<span>Open-source workflows</span></li>
-            <li>LiDAR &amp; photogrammetry<span>RGB aerial surveys · 3D models</span></li>
-            <li>Spatial analytics<span>Network · clustering · deep learning</span></li>
-          </ul>
-        </article>
-        <article class="card cap reveal">
-          <div class="cap-head"><h3>Data &amp; software</h3><span class="mono">02</span></div>
-          <p>Pipelines, databases and apps that turn repeatable work into tools.</p>
-          <ul>
-            <li>Python<span>ArcPy · GDAL · ETL</span></li>
-            <li>SQL<span>SQLite · database design</span></li>
-            <li>Web apps<span>React · TypeScript · Vite · Tailwind</span></li>
-            <li>Data apps<span>Streamlit · Altair</span></li>
-            <li>C++ &amp; HTML/CSS/JS<span>Interactive HTML reports</span></li>
-          </ul>
-        </article>
-        <article class="card cap reveal">
-          <div class="cap-head"><h3>AI &amp; automation</h3><span class="mono">03</span></div>
-          <p>Using AI agents to build and maintain real tools, with clear specs and data boundaries.</p>
-          <ul>
-            <li>Agentic development<span>Claude Code</span></li>
-            <li>Model Context Protocol<span>MCP server integrations</span></li>
-            <li>Agent skills<span>Reusable, versioned workflows</span></li>
-            <li>Context engineering<span>PRDs · design-system specs</span></li>
-            <li>Privacy-first AI<span>Client data stays local</span></li>
-          </ul>
-        </article>
-        <article class="card cap reveal">
-          <div class="cap-head"><h3>Mechanical &amp; electrical design</h3><span class="mono">04</span></div>
-          <p>Hardware that has to fly: CAD, prototyping and embedded control.</p>
-          <ul>
-            <li>Siemens NX<span>Parametric CAD · assemblies</span></li>
-            <li>Autodesk Inventor<span>Part &amp; assembly design</span></li>
-            <li>AutoCAD &amp; Revit<span>Drafting · BIM · CAD-GIS</span></li>
-            <li>3D printing<span>Rapid prototyping</span></li>
-            <li>Arduino<span>Servo control · wireless triggering</span></li>
-          </ul>
-        </article>
-        <article class="card cap reveal">
-          <div class="cap-head"><h3>Modeling &amp; analysis</h3><span class="mono">05</span></div>
-          <p>Physical and statistical models that quantify risk before decisions are made.</p>
-          <ul>
-            <li>HEC-HMS<span>Hydrologic modeling</span></li>
-            <li>HEC-RAS<span>Hydraulic modeling</span></li>
-            <li>Terrain &amp; DEM analysis<span>D8 · watershed delineation</span></li>
-            <li>Predictive modeling<span>Rainfall scenario simulation</span></li>
-            <li>Weather data<span>Computational weather modeling</span></li>
-          </ul>
-        </article>
-        <article class="card cap reveal">
-          <div class="cap-head"><h3>Aviation &amp; delivery</h3><span class="mono">06</span></div>
-          <p>The domain knowledge and project discipline that make the technical work useful.</p>
-          <ul>
-            <li>Airport planning<span>CIP · ORAT · infrastructure</span></li>
-            <li>UAS operations<span>FAA Part 107</span></li>
-            <li>Project management<span>Teams up to 30</span></li>
-            <li>QA/QC &amp; documentation<span>Reproducible deliverables</span></li>
-            <li>Inspection<span>NDT Level II · MT &amp; PT</span></li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="ai reveal">
-        <div class="ai-text">
-          <p class="eyebrow">AI-native workflow</p>
-          <h3>Building with agents, not just chatbots</h3>
-          <p>
-            I use AI coding agents as part of my engineering process. The agent works from a written spec and
-            connects to the tools I already use through the Model Context Protocol. I review every change.
-            This is how I ship planning tools quickly without handing client data to a model.
-          </p>
-        </div>
-        <ol class="pipeline">
-          <li><span class="node">SPEC</span><strong>Define</strong><span>PRD, data schema and design system written first as agent context</span></li>
-          <li><span class="node">MCP</span><strong>Connect</strong><span>Agent reaches GitHub, Figma and document stores through MCP servers</span></li>
-          <li><span class="node">AGT</span><strong>Build</strong><span>Claude Code implements, runs self-tests and renders previews</span></li>
-          <li><span class="node">QA</span><strong>Review</strong><span>Human review, headless browser checks and version control before release</span></li>
-        </ol>
-        <ul class="tags ai-stack">
-          <li>Claude Code</li><li>MCP</li><li>Agent skills</li><li>Prompt &amp; context design</li><li>Headless test automation</li><li>Git / GitHub</li>
-        </ul>
       </div>
     </section>
 
@@ -407,27 +587,10 @@
         <div class="reveal">
           <h3 class="col-title">Education</h3>
           <ul class="list">
-            <li>
-              <div>
-                <strong>Graduate Certificate, Geospatial Information Science</strong>
-                <span>Purdue University · GPA 4.00</span>
-              </div>
-              <span class="mono muted">2024 — 2025</span>
-            </li>
-            <li>
-              <div>
-                <strong>B.S., Unmanned Aerial Systems</strong>
-                <span>Purdue University · GPA 3.86 · Dean's List</span>
-              </div>
-              <span class="mono muted">2021 — 2025</span>
-            </li>
-            <li>
-              <div>
-                <strong>Purdue Presidential Scholar</strong>
-                <span>Purdue University</span>
-              </div>
-              <span class="mono muted">2021</span>
-            </li>
+            <li><div><strong>Graduate Certificate, Geospatial Information Science</strong><span>Purdue University · GPA 4.00</span></div><span class="mono muted">2024 — 2025</span></li>
+            <li><div><strong>B.S., Unmanned Aerial Systems</strong><span>Purdue University · GPA 3.86 · Dean's List</span></div><span class="mono muted">2021 — 2025</span></li>
+            <li><div><strong>Purdue Presidential Scholar</strong><span>Purdue University</span></div><span class="mono muted">2021</span></li>
+            <li><div><strong>Project Lead The Way, Engineering</strong><span>High school pre-engineering pathway</span></div><span class="mono muted">HS</span></li>
           </ul>
         </div>
         <div class="reveal">
@@ -435,6 +598,7 @@
           <ul class="list">
             <li><div><strong>Responsible Conduct of Research</strong><span>CITI Program</span></div><span class="mono muted">2024</span></li>
             <li><div><strong>NDT Level II, Magnetic Particle &amp; Liquid Penetrant</strong><span>ASNT · plus Level I Eddy Current</span></div><span class="mono muted">2023</span></li>
+            <li><div><strong>Engineering Drawings for Manufacturing</strong><span>Professional training</span></div><span class="mono muted">Cert.</span></li>
             <li><div><strong>FAA Remote Pilot (Part 107)</strong><span>Federal Aviation Administration</span></div><span class="mono muted">2021</span></li>
           </ul>
         </div>
@@ -454,7 +618,7 @@
         </figure>
         <figure class="card quote reveal">
           <blockquote>"Demonstrated an exceptional ability to analyze data swiftly and accurately, consistently meeting tight deadlines."</blockquote>
-          <figcaption><span class="avatar">SM</span><span><strong>Sorin Adam Matei</strong><span class="muted">Purdue University</span></span></figcaption>
+          <figcaption><span class="avatar">SM</span><span><strong>Sorin Adam Matei</strong><span class="muted">Purdue University · FORCES Initiative</span></span></figcaption>
         </figure>
       </div>
     </section>
@@ -465,8 +629,8 @@
         <div class="cta-bg" aria-hidden="true"></div>
         <div class="cta-inner">
           <p class="mono cta-coords">KMDW · Chicago Midway International</p>
-          <h2>Have a spatial problem to solve?</h2>
-          <p>I'm open to consulting projects, collaborations and conversations about geospatial data, automation and aviation planning.</p>
+          <h2>Have a technical problem to solve?</h2>
+          <p>I'm open to consulting projects, product development work and conversations about data, software and engineering.</p>
           <div class="hero-actions">
             <a href="mailto:gho13322@gmail.com" class="btn btn-inverse">gho13322@gmail.com</a>
             <a href="https://www.linkedin.com/in/gavin-ho-925979239" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
@@ -487,7 +651,6 @@
       </span>
     </div>
   </footer>
-
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
