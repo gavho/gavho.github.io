@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/ord-aerial.jpg">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -29,6 +29,7 @@
         <a href="#research">Research</a>
         <a href="work.html">Work</a>
         <a href="#work">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#about">About</a>
       </nav>
       <a href="#contact" class="btn btn-secondary nav-cta">Get in touch</a>
@@ -41,7 +42,7 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <p class="coords mono reveal">Geospatial Data &amp; Consulting · Chicago, IL</p>
+        <p class="status reveal"><i aria-hidden="true"></i>Geospatial data &amp; consulting · Chicago, IL</p>
         <h1 class="reveal">Data and geospatial solutions <br>for airports and infrastructure.</h1>
         <p class="lead reveal">
           I consult with clients to turn complex spatial data into clear decisions, building data workflows,
@@ -248,7 +249,7 @@
           <div class="row-body">
             <h3>Aviation Planner</h3>
             <p class="org">R.M. Chin &amp; Associates, Inc. · Chicago, IL</p>
-            <p>Consulting on aviation planning projects, delivering geospatial analysis, data workflows and technical solutions for airport clients.</p>
+            <p>Consulting on aviation planning projects, delivering geospatial analysis, data workflows and technical solutions for airport clients. I also build internal planning software, including a capital improvement program prioritization app, an operational readiness (ORAT) program tracker with dependency mapping and a presentation generator for client-ready decks.</p>
           </div>
         </li>
         <li class="row reveal">
@@ -281,7 +282,7 @@
     <!-- About -->
     <section id="about" class="section container">
       <div class="about reveal">
-        <img src="assets/img/headshot.jpg" alt="Portrait of Gavin Ho" class="headshot" loading="lazy" width="320" height="320">
+        <span class="headshot-frame brackets"><img src="assets/img/headshot.jpg" alt="Portrait of Gavin Ho" class="headshot" loading="lazy" width="320" height="320"></span>
         <div>
           <p class="eyebrow">About</p>
           <h2>Hi, I'm Gavin.</h2>
@@ -291,13 +292,112 @@
             the most useful analysis is one that helps someone make a decision. Today I bring that mindset to aviation
             consulting in Chicago, building data workflows and technical solutions that help airport clients plan for what's next.
           </p>
-          <div class="toolkit">
-            <div><h3>Programming</h3><p>Python · ArcPy · GDAL · SQL · C++</p></div>
-            <div><h3>GIS</h3><p>ArcGIS Pro · ArcGIS Online · ArcGIS Enterprise · QGIS · ModelBuilder</p></div>
-            <div><h3>Modeling</h3><p>HEC-HMS · HEC-RAS · Hydrologic &amp; terrain analysis</p></div>
-            <div><h3>CAD / BIM</h3><p>AutoCAD · Revit</p></div>
+          <div class="hero-actions">
+            <a href="#skills" class="btn btn-secondary">Full skill set</a>
+            <a href="work.html" class="btn btn-tertiary">Selected work →</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <!-- Capabilities -->
+    <section id="skills" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Capabilities</p>
+        <h2>Skills and software</h2>
+        <p class="section-sub">A spatial analyst's core, with software engineering, mechanical design and AI-assisted development built around it.</p>
+      </div>
+
+      <div class="caps">
+        <article class="card cap reveal">
+          <div class="cap-head"><h3>Geospatial &amp; remote sensing</h3><span class="mono">01</span></div>
+          <p>Analysis, cartography and web GIS, from raw imagery and LiDAR to published dashboards.</p>
+          <ul>
+            <li>ArcGIS Pro<span>Spatial Analyst · ModelBuilder</span></li>
+            <li>ArcGIS Online &amp; Enterprise<span>Experience Builder · StoryMaps</span></li>
+            <li>QGIS<span>Open-source workflows</span></li>
+            <li>LiDAR &amp; photogrammetry<span>RGB aerial surveys · 3D models</span></li>
+            <li>Spatial analytics<span>Network · clustering · deep learning</span></li>
+          </ul>
+        </article>
+        <article class="card cap reveal">
+          <div class="cap-head"><h3>Data &amp; software</h3><span class="mono">02</span></div>
+          <p>Pipelines, databases and apps that turn repeatable work into tools.</p>
+          <ul>
+            <li>Python<span>ArcPy · GDAL · ETL</span></li>
+            <li>SQL<span>SQLite · database design</span></li>
+            <li>Web apps<span>React · TypeScript · Vite · Tailwind</span></li>
+            <li>Data apps<span>Streamlit · Altair</span></li>
+            <li>C++ &amp; HTML/CSS/JS<span>Interactive HTML reports</span></li>
+          </ul>
+        </article>
+        <article class="card cap reveal">
+          <div class="cap-head"><h3>AI &amp; automation</h3><span class="mono">03</span></div>
+          <p>Using AI agents to build and maintain real tools, with clear specs and data boundaries.</p>
+          <ul>
+            <li>Agentic development<span>Claude Code</span></li>
+            <li>Model Context Protocol<span>MCP server integrations</span></li>
+            <li>Agent skills<span>Reusable, versioned workflows</span></li>
+            <li>Context engineering<span>PRDs · design-system specs</span></li>
+            <li>Privacy-first AI<span>Client data stays local</span></li>
+          </ul>
+        </article>
+        <article class="card cap reveal">
+          <div class="cap-head"><h3>Mechanical &amp; electrical design</h3><span class="mono">04</span></div>
+          <p>Hardware that has to fly: CAD, prototyping and embedded control.</p>
+          <ul>
+            <li>Siemens NX<span>Parametric CAD · assemblies</span></li>
+            <li>Autodesk Inventor<span>Part &amp; assembly design</span></li>
+            <li>AutoCAD &amp; Revit<span>Drafting · BIM · CAD-GIS</span></li>
+            <li>3D printing<span>Rapid prototyping</span></li>
+            <li>Arduino<span>Servo control · wireless triggering</span></li>
+          </ul>
+        </article>
+        <article class="card cap reveal">
+          <div class="cap-head"><h3>Modeling &amp; analysis</h3><span class="mono">05</span></div>
+          <p>Physical and statistical models that quantify risk before decisions are made.</p>
+          <ul>
+            <li>HEC-HMS<span>Hydrologic modeling</span></li>
+            <li>HEC-RAS<span>Hydraulic modeling</span></li>
+            <li>Terrain &amp; DEM analysis<span>D8 · watershed delineation</span></li>
+            <li>Predictive modeling<span>Rainfall scenario simulation</span></li>
+            <li>Weather data<span>Computational weather modeling</span></li>
+          </ul>
+        </article>
+        <article class="card cap reveal">
+          <div class="cap-head"><h3>Aviation &amp; delivery</h3><span class="mono">06</span></div>
+          <p>The domain knowledge and project discipline that make the technical work useful.</p>
+          <ul>
+            <li>Airport planning<span>CIP · ORAT · infrastructure</span></li>
+            <li>UAS operations<span>FAA Part 107</span></li>
+            <li>Project management<span>Teams up to 30</span></li>
+            <li>QA/QC &amp; documentation<span>Reproducible deliverables</span></li>
+            <li>Inspection<span>NDT Level II · MT &amp; PT</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="ai reveal">
+        <div class="ai-text">
+          <p class="eyebrow">AI-native workflow</p>
+          <h3>Building with agents, not just chatbots</h3>
+          <p>
+            I use AI coding agents as part of my engineering process. The agent works from a written spec and
+            connects to the tools I already use through the Model Context Protocol. I review every change.
+            This is how I ship planning tools quickly without handing client data to a model.
+          </p>
+        </div>
+        <ol class="pipeline">
+          <li><span class="node">SPEC</span><strong>Define</strong><span>PRD, data schema and design system written first as agent context</span></li>
+          <li><span class="node">MCP</span><strong>Connect</strong><span>Agent reaches GitHub, Figma and document stores through MCP servers</span></li>
+          <li><span class="node">AGT</span><strong>Build</strong><span>Claude Code implements, runs self-tests and renders previews</span></li>
+          <li><span class="node">QA</span><strong>Review</strong><span>Human review, headless browser checks and version control before release</span></li>
+        </ol>
+        <ul class="tags ai-stack">
+          <li>Claude Code</li><li>MCP</li><li>Agent skills</li><li>Prompt &amp; context design</li><li>Headless test automation</li><li>Git / GitHub</li>
+        </ul>
       </div>
     </section>
 

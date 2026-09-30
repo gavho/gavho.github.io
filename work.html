@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
         <a href="index.html#research">Research</a>
         <a href="work.html" aria-current="page">Work</a>
         <a href="index.html#work">Experience</a>
+        <a href="index.html#skills">Skills</a>
         <a href="index.html#about">About</a>
       </nav>
       <a href="#contact" class="btn btn-secondary nav-cta">Get in touch</a>
@@ -52,7 +53,7 @@
         </svg>
       </div>
       <div class="container page-hero-inner">
-        <p class="coords mono reveal">Selected work · Beyond aviation</p>
+        <p class="status reveal"><i aria-hidden="true"></i>Selected work · Beyond aviation</p>
         <h1 class="reveal">Where I apply technical knowledge.</h1>
         <p class="lead reveal">
           Aviation is my day job, but the same toolkit carries over to other fields. I've used it to reconstruct a
@@ -295,6 +296,33 @@
           </p>
           <ul class="tags"><li>ArcPy</li><li>ModelBuilder</li><li>GDAL</li></ul>
         </article>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="badge">Airport consulting</span>
+            <span class="mono muted">2026</span>
+          </div>
+          <h3>Planning software for airport programs</h3>
+          <p>
+            Internal tools for consulting work. One is a capital improvement program app that scores and sequences
+            projects by their dependencies. Another is an operational readiness (ORAT) tracker with an interactive
+            dependency map and exportable HTML dashboards. A third is a local deck generator that builds
+            standardized presentations without client data leaving the machine.
+          </p>
+          <ul class="tags"><li>Streamlit</li><li>React</li><li>TypeScript</li><li>Dependency graphs</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="badge">AI-assisted engineering</span>
+            <span class="mono muted">Ongoing</span>
+          </div>
+          <h3>Agent-built, human-reviewed</h3>
+          <p>
+            These tools were built with AI coding agents that work from a written spec and design system. They
+            connect to GitHub, Figma and document stores through Model Context Protocol servers, and are checked
+            with headless browser self-tests. The result is faster delivery with every change reviewed.
+          </p>
+          <ul class="tags"><li>Claude Code</li><li>MCP</li><li>Agent skills</li><li>Self-tests</li></ul>
+        </article>
       </div>
     </section>
 
@@ -347,7 +375,7 @@
           </ul>
           <p class="fine">The business has since wound down. Archived footage is on the <a href="https://www.youtube.com/channel/UCaFrmwuQse-BPdZIXVHW69Q" target="_blank" rel="noopener">APEX UAS YouTube channel ↗</a></p>
         </div>
-        <div class="apex-media">
+        <div class="apex-media brackets">
           <img class="m-a" src="assets/img/apex-heritage-lake.jpg" alt="Aerial view of Heritage Lake, Indiana, with lakeside homes and farmland" loading="lazy">
           <img class="m-b" src="assets/img/apex-plainfield-night.jpg" alt="Night aerial of a lit intersection and mixed-use building in Plainfield, Indiana" loading="lazy">
           <img class="m-c" src="assets/img/apex-utah.jpg" alt="Aerial of a river meander through red rock canyons in Utah" loading="lazy">
