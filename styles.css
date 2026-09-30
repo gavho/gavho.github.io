@@ -662,6 +662,11 @@ body::before {
 .feature h3 { margin: 18px 0 20px; font-size: clamp(24px, 2.8vw, 32px); font-weight: 600; letter-spacing: -0.03em; }
 .feature-body { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; border-top: 1px solid rgba(230, 220, 205,0.25); padding-top: 20px; }
 .feature-k { display: inline-block; font-size: 12px; color: var(--primary); letter-spacing: 0.08em; margin-bottom: 8px; }
+.feature-current { background: linear-gradient(120deg, rgba(var(--primary-rgb), 0.12), rgba(12, 13, 17, 0.88) 50%, rgba(8, 9, 12, 0.9)); }
+.feature-current .feature-lead + .feature-lead { margin-top: -10px; }
+.feature-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--hairline); }
+.feature-foot .inline-link { font-size: 13px; }
+.stats dd a:hover { color: var(--primary-hover); }
 .feature-lead { margin: -8px 0 22px; max-width: 720px; color: var(--ink-muted); font-size: 16px; line-height: 1.6; }
 .feature-4 { grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .eng-3 { grid-template-columns: repeat(3, 1fr); }

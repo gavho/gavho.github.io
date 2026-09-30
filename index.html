@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/ord-aerial.jpg">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -66,11 +66,42 @@
     <!-- Profile bar -->
     <section class="container stats-wrap">
       <dl class="stats reveal">
-        <div><dt>Current role</dt><dd>Aviation Planner<span>R.M. Chin &amp; Associates</span></dd></div>
+        <div><dt>Current role</dt><dd><a href="#current">Aviation Planner</a><span>R.M. Chin &amp; Associates</span></dd></div>
         <div><dt>Disciplines</dt><dd>Data · Dev · Engineering<span>Consulting &amp; product development</span></dd></div>
         <div><dt>Approach</dt><dd>Listen · Analyze · Deliver<span>Requirements to working solution</span></dd></div>
         <div><dt>Education</dt><dd>Purdue University<span>B.S. · Graduate Certificate, GIS</span></dd></div>
       </dl>
+    </section>
+
+    <!-- Current role -->
+    <section id="current" class="scene" style="--scene: url('assets/bg/routes.svg'); --tint: 255, 122, 26">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Current role</p>
+          <h2>Aviation Planner at R.M. Chin &amp; Associates</h2>
+        </div>
+        <article class="feature feature-current reveal">
+          <p class="feature-lead">
+            R.M. Chin is a Chicago-based firm, founded in 1989, that provides owner's representation and program, project
+            and construction management across aviation, buildings and transportation. Its aviation work includes major
+            programs at O'Hare and Midway.
+          </p>
+          <p class="feature-lead">
+            I support airport planning programs end to end. I listen to what planning teams and leadership need, analyze
+            the data and deliver the plans, analysis and tools that move projects forward.
+          </p>
+          <div class="feature-body feature-4">
+            <div><span class="mono feature-k">Capital programs</span><p>Capital Improvement Program development, project definition documents, and project scoring and sequencing.</p></div>
+            <div><span class="mono feature-k">ORAT &amp; stakeholders</span><p>Operational readiness, activation and transfer support, and coordination across stakeholders.</p></div>
+            <div><span class="mono feature-k">Airfield &amp; traffic</span><p>Airfield layouts, Airport Layout Plan data, and roadway and traffic analysis.</p></div>
+            <div><span class="mono feature-k">Tools &amp; dashboards</span><p>GIS analysis, internal planning tools (CIP prioritization, an ORAT tracker with dependency mapping, a deck generator) and dashboards for planning teams and leadership.</p></div>
+          </div>
+          <div class="feature-foot">
+            <span class="badge">2026 — Now · Chicago, IL</span>
+            <a class="inline-link mono" href="https://rmchin.com" target="_blank" rel="noopener">rmchin.com ↗</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Technical range -->
@@ -114,6 +145,7 @@
           <h3>Mechanical design &amp; QA</h3>
           <p>Hardware designed, drawn, built and inspected to spec.</p>
           <ul>
+            <li>B.S. Unmanned Aerial Systems, Purdue</li>
             <li>Mechanical design at GRYFN: mounts, enclosures, manufactured parts</li>
             <li>Belcan internship on Rolls-Royce engine programs</li>
             <li>V-22 Osprey stator blade QA/QC review</li>
@@ -210,10 +242,11 @@
 
         <div class="grid more">
           <article class="card reveal">
-            <div class="card-top"><span class="badge">Aviation planning</span><span class="mono muted">2026 — Now</span></div>
+            <div class="card-top"><span class="badge">R.M. Chin</span><span class="mono muted">2026 — Now</span></div>
             <h3>Planning tools &amp; analysis</h3>
             <p>Roadway and traffic analysis, airfield layouts and Airport Layout Plan (ALP) data tools, plus dashboards and tools that give planning teams and senior leadership a clear view of their programs.</p>
             <ul class="tags"><li>Traffic analysis</li><li>ALP data</li><li>Dashboards</li></ul>
+            <a class="card-link" href="#current">About the role →</a>
           </article>
           <article class="card reveal">
             <div class="card-top"><span class="badge">Hydrology · H&amp;H</span><span class="mono muted">Aug — Dec 2024</span></div>
@@ -251,8 +284,9 @@
           <p class="eyebrow">Engineering &amp; product development</p>
           <h2>From CAD model to manufactured part</h2>
           <p class="section-sub">
-            My engineering background: mechanical design that went to manufacturing, payload hardware that flew, and
-            aerospace components reviewed against spec.
+            My engineering background comes from a B.S. in Unmanned Aerial Systems at Purdue, where I studied aircraft
+            systems, sensors and flight operations and built and flew hardware. That foundation carried into mechanical
+            design at GRYFN and aerospace QA at Belcan.
           </p>
         </div>
 
@@ -299,7 +333,7 @@
             <li>Siemens NX</li><li>Autodesk Inventor</li><li>AutoCAD</li><li>3D design &amp; printing</li><li>Soldering</li>
             <li>Arduino</li><li>Mechanical drawings</li><li>NDT</li>
           </ul>
-          <span class="bench-note">Foundation: Project Lead The Way (PLTW) engineering pathway in high school</span>
+          <span class="bench-note">Foundations: B.S. Unmanned Aerial Systems (Purdue): aircraft systems &amp; design, design-build-fly projects, sensors &amp; remote sensing, FAA regulations &amp; operations. Earlier: Project Lead The Way (PLTW) engineering in high school.</span>
         </div>
       </div>
     </section>
@@ -345,7 +379,7 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="scene" style="--scene: url('assets/bg/routes.svg'); --tint: 200, 190, 175">
+    <section id="experience" class="scene" style="--scene: url('assets/bg/opsmap.svg'); --art: 0.25; --tint: 200, 190, 175">
       <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Experience</p>
@@ -358,7 +392,7 @@
           <div class="row-body">
             <h3>Aviation Planner</h3>
             <p class="org">R.M. Chin &amp; Associates, Inc. · Chicago, IL</p>
-            <p>Consulting on aviation planning projects: roadway and traffic analysis, airfield layouts and ALP data tools, and dashboards for planning teams and leadership. I also build internal planning software, including a capital improvement program prioritization app, an ORAT program tracker with dependency mapping and a presentation generator.</p>
+            <p>Aviation planning for major airport programs: capital planning, ORAT, airfield/ALP and traffic analysis, and planning tools. <a class="inline-link" href="#current">Role details →</a></p>
           </div>
         </li>
         <li class="row reveal">
@@ -420,6 +454,7 @@
             <p>Analysis, cartography and web GIS, from raw imagery and LiDAR to published dashboards.</p>
             <ul>
               <li>ArcGIS Pro<span>Spatial Analyst · ModelBuilder</span></li>
+              <li>AutoCAD &amp; Revit<span>Drafting · BIM · CAD-GIS</span></li>
               <li>ArcGIS Online &amp; Enterprise<span>Experience Builder · StoryMaps</span></li>
               <li>QGIS<span>Open-source workflows</span></li>
               <li>LiDAR &amp; photogrammetry<span>RGB aerial surveys · 3D models</span></li>
@@ -456,7 +491,7 @@
               <li>Production drawings<span>Manufactured parts at GRYFN</span></li>
               <li>3D design &amp; printing<span>Rapid prototyping</span></li>
               <li>Soldering &amp; electronics<span>Arduino · servos · wireless</span></li>
-              <li>AutoCAD &amp; Revit<span>Drafting · BIM · CAD-GIS</span></li>
+              <li>UAS systems<span>Aircraft systems · sensor integration</span></li>
             </ul>
           </article>
           <article class="card cap reveal">
@@ -477,7 +512,7 @@
               <li>Airfield layouts &amp; ALP data<span>Planning initiatives</span></li>
               <li>Dashboards for leadership<span>Program status · decisions</span></li>
               <li>Project management<span>Research &amp; planning teams</span></li>
-              <li>Airport planning<span>CIP · ORAT · infrastructure</span></li>
+              <li>Airport planning<span>CIP · PDDs · ORAT · master plans</span></li>
               <li>QA/QC<span>Aerospace parts · data · NDT Level II</span></li>
             </ul>
           </article>
@@ -546,8 +581,9 @@
           <h2>Hi, I'm Gavin.</h2>
           <p class="about-text">
             I'm a technical professional working in product development and consulting. My roots are in engineering: PLTW in
-            high school, aerospace QA/QC at Belcan, then mechanical design for drone payloads at GRYFN. From there my work moved into
-            data and software, and I earned a B.S. and a Graduate Certificate in Geospatial Information Science at Purdue.
+            high school, a B.S. in Unmanned Aerial Systems at Purdue, aerospace QA/QC at Belcan, then mechanical design for drone
+            payloads at GRYFN. From there my work moved into data and software, and I added a Graduate Certificate in Geospatial
+            Information Science.
           </p>
           <p class="about-text">
             Today I consult on aviation planning in Chicago. I listen first, make sure I understand the problem, then
@@ -568,7 +604,7 @@
           <h3 class="col-title">Education</h3>
           <ul class="list">
             <li><div><strong>Graduate Certificate, Geospatial Information Science</strong><span>Purdue University · GPA 4.00</span></div><span class="mono muted">2024 — 2025</span></li>
-            <li><div><strong>B.S., Unmanned Aerial Systems</strong><span>Purdue University · GPA 3.86 · Dean's List</span></div><span class="mono muted">2021 — 2025</span></li>
+            <li><div><strong>B.S., Unmanned Aerial Systems</strong><span>Purdue University · GPA 3.86 · Dean's List · Aircraft systems, sensors, flight ops</span></div><span class="mono muted">2021 — 2025</span></li>
             <li><div><strong>Purdue Presidential Scholar</strong><span>Purdue University</span></div><span class="mono muted">2021</span></li>
             <li><div><strong>Project Lead The Way, Engineering</strong><span>High school pre-engineering pathway</span></div><span class="mono muted">HS</span></li>
           </ul>
