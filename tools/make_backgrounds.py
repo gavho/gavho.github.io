@@ -4,7 +4,7 @@
 
 Each scene is a context-matched SVG: topographic contours (hydrology), a turbine
 stator blueprint (engineering), a LiDAR-style point cloud (data), PCB traces
-(skills) and an audio spectrum (side projects). Deterministic: same seed, same art.
+(skills), a campaign map, a code minimap and a route map. Deterministic: same seed, same art.
 """
 import math
 import random
@@ -12,6 +12,8 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "assets" / "bg"
 W, H = 1600, 900
+INK = "#d9d2c7"   # line work
+HOT = "#ff7a1a"   # highlights (site accent)
 
 
 def svg(body, w=W, h=H, defs=""):
@@ -104,13 +106,13 @@ def contours():
         for line in join(marching_squares(z, nx, ny, lv)):
             d.append("M" + " ".join(f"{f(x * W)} {f(y * H)}" for x, y in line))
         index = n % 5 == 0
-        paths.append(f'<path d="{"".join(d)}" fill="none" stroke="#5eead4" stroke-opacity="{0.55 if index else 0.22}" stroke-width="{1.3 if index else 0.8}"/>')
+        paths.append(f'<path d="{"".join(d)}" fill="none" stroke="{HOT if index else INK}" stroke-opacity="{0.5 if index else 0.18}" stroke-width="{1.3 if index else 0.8}"/>')
     rnd = random.Random(3)
     labels = []
     for _ in range(9):
         x, y = rnd.uniform(0.1, 0.9), rnd.uniform(0.1, 0.9)
-        labels.append(f'<g transform="translate({f(x * W)} {f(y * H)})"><path d="M-4 0H4M0 -4V4" stroke="#99f6e4" stroke-opacity=".7"/>'
-                      f'<text x="7" y="-5" font-family="monospace" font-size="11" fill="#99f6e4" fill-opacity=".6">{200 + z(x, y) * 40:.1f}</text></g>')
+        labels.append(f'<g transform="translate({f(x * W)} {f(y * H)})"><path d="M-4 0H4M0 -4V4" stroke="{INK}" stroke-opacity=".7"/>'
+                      f'<text x="7" y="-5" font-family="monospace" font-size="11" fill="{INK}" fill-opacity=".6">{200 + z(x, y) * 40:.1f}</text></g>')
     return svg("".join(paths) + "".join(labels))
 
 
@@ -133,7 +135,7 @@ def airfoil(cx, cy, chord, angle, camber=0.09, thick=0.11, n=28):
 
 
 def blueprint():
-    c = "#7cb4ff"
+    c = INK
     minor = "".join(f'<path d="M{x} 0V{H}" />' for x in range(0, W + 1, 20)) + "".join(f'<path d="M0 {y}H{W}" />' for y in range(0, H + 1, 20))
     major = "".join(f'<path d="M{x} 0V{H}" />' for x in range(0, W + 1, 100)) + "".join(f'<path d="M0 {y}H{W}" />' for y in range(0, H + 1, 100))
     body = [f'<g stroke="{c}" stroke-opacity=".06" stroke-width="1">{minor}</g>',
@@ -187,7 +189,7 @@ def pointcloud():
     groups = []
     for b, circles in enumerate(bands):
         t = b / 7
-        col = f"#{int(34 + t * 120):02x}{int(211 - t * 90):02x}{int(238 - t * 20):02x}"
+        col = f"#{int(150 + t * 105):02x}{int(145 - t * 23):02x}{int(140 - t * 114):02x}"
         groups.append(f'<g fill="{col}" fill-opacity="{f(0.35 + t * 0.5)}">{"".join(circles)}</g>')
     return svg("".join(groups))
 
@@ -216,34 +218,15 @@ def circuit():
         traces.append("".join(d))
         pads.append(f'<circle cx="{x}" cy="{y}" r="4"/>')
     chips = "".join(f'<rect x="{rnd.randrange(100, W - 200, 20)}" y="{rnd.randrange(100, H - 150, 20)}" width="{rnd.choice([80, 120])}" height="{rnd.choice([60, 80])}" rx="3"/>' for _ in range(6))
-    return svg(f'<g fill="none" stroke="#818cf8" stroke-opacity=".35" stroke-width="1.6" stroke-linejoin="round"><path d="{"".join(traces)}"/></g>'
-               f'<g fill="#0a0b10" stroke="#a5b4fc" stroke-opacity=".6" stroke-width="1.4">{"".join(pads)}</g>'
-               f'<g fill="#0e1020" stroke="#818cf8" stroke-opacity=".4">{chips}</g>')
-
-
-# --- Audio spectrum (DJ / RGB) --------------------------------------------------
-def spectrum():
-    rnd = random.Random(9)
-    bars = []
-    n = 96
-    bw = W / n
-    for i in range(n):
-        env = math.exp(-((i - n * 0.3) ** 2) / (2 * (n * 0.22) ** 2)) * 0.8 + 0.2
-        h = (0.25 + 0.75 * rnd.random()) * env * 360
-        x = i * bw + 2
-        bars.append(f'<rect x="{f(x)}" y="{f(H / 2 - h)}" width="{f(bw - 5)}" height="{f(h * 2)}" rx="2"/>')
-    wave = "M0 450" + "".join(
-        f" L{f(x)} {f(450 + 80 * math.sin(x / 38) * math.sin(x / 210) * math.cos(x / 97))}" for x in range(0, W + 1, 8))
-    defs = ('<linearGradient id="rgb" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="0"><stop offset="0" stop-color="#ff3d6e"/><stop offset=".25" stop-color="#ffb13d"/>'
-            '<stop offset=".5" stop-color="#3dffa2"/><stop offset=".75" stop-color="#3db8ff"/><stop offset="1" stop-color="#b13dff"/></linearGradient>')
-    return svg(f'<g fill="url(#rgb)" fill-opacity=".32">{"".join(bars)}</g>'
-               f'<path d="{wave}" fill="none" stroke="url(#rgb)" stroke-width="2" stroke-opacity=".8"/>', defs=defs)
+    return svg(f'<g fill="none" stroke="{INK}" stroke-opacity=".22" stroke-width="1.6" stroke-linejoin="round"><path d="{"".join(traces)}"/></g>'
+               f'<g fill="#0a0b10" stroke="{HOT}" stroke-opacity=".55" stroke-width="1.4">{"".join(pads)}</g>'
+               f'<g fill="#14110e" stroke="{INK}" stroke-opacity=".4">{chips}</g>')
 
 
 # --- Campaign map (project leadership / Barbarossa) ----------------------------
 def opsmap():
     rnd = random.Random(41)
-    c, a = "#a5b4fc", "#828fff"
+    c, a = INK, HOT
     grid = "".join(f'<path d="M{x} 0V{H}"/>' for x in range(0, W + 1, 80)) + "".join(f'<path d="M0 {y}H{W}"/>' for y in range(0, H + 1, 80))
     body = [f'<g stroke="{c}" stroke-opacity=".08">{grid}</g>']
     axes, dots = [], []
@@ -271,7 +254,7 @@ def opsmap():
 # --- Code minimap (development) ------------------------------------------------
 def codemap():
     rnd = random.Random(2)
-    cols = ["#828fff", "#5eead4", "#f0b23a", "#c6cbd6", "#8a909d", "#ef5b62"]
+    cols = [HOT, "#ffb27a", "#f0b23a", "#d9d2c7", "#8a857d", "#ef5b62"]
     rects = []
     y, indent = 40, 0
     while y < H - 20:
@@ -293,7 +276,7 @@ def codemap():
 
 # --- Career route map (experience) ---------------------------------------------
 def routes():
-    c = "#a5b4fc"
+    c = INK
     # Rough relative positions of Chicago, West Lafayette, Indianapolis and Plainfield
     nodes = {"ORD": (1180, 170), "LAF": (1080, 470), "IND": (1270, 690), "PLN": (1160, 720)}
     body = []
@@ -303,16 +286,16 @@ def routes():
     for a, b in legs:
         (x1, y1), (x2, y2) = nodes[a], nodes[b]
         mx, my = (x1 + x2) / 2 - (y2 - y1) * 0.25, (y1 + y2) / 2 + (x2 - x1) * 0.25
-        body.append(f'<path d="M{x1} {y1} Q{f(mx)} {f(my)} {x2} {y2}" fill="none" stroke="#828fff" stroke-opacity=".55" stroke-width="1.6" stroke-dasharray="8 6"/>')
+        body.append(f'<path d="M{x1} {y1} Q{f(mx)} {f(my)} {x2} {y2}" fill="none" stroke="{HOT}" stroke-opacity=".55" stroke-width="1.6" stroke-dasharray="8 6"/>')
     for k, (x, y) in nodes.items():
-        body.append(f'<g transform="translate({x} {y})"><circle r="5" fill="#828fff"/><circle r="14" fill="none" stroke="#828fff" stroke-opacity=".4"/>'
+        body.append(f'<g transform="translate({x} {y})"><circle r="5" fill="{HOT}"/><circle r="14" fill="none" stroke="{HOT}" stroke-opacity=".4"/>'
                     f'<text x="20" y="4" font-family="monospace" font-size="13" fill="{c}" fill-opacity=".8">{k}</text></g>')
     return svg("".join(body))
 
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, fn in [("contours", contours), ("blueprint", blueprint), ("pointcloud", pointcloud), ("circuit", circuit), ("spectrum", spectrum), ("opsmap", opsmap), ("codemap", codemap), ("routes", routes)]:
+    for name, fn in [("contours", contours), ("blueprint", blueprint), ("pointcloud", pointcloud), ("circuit", circuit), ("opsmap", opsmap), ("codemap", codemap), ("routes", routes)]:
         data = fn()
         (OUT / f"{name}.svg").write_text(data, encoding="utf-8")
         print(f"assets/bg/{name}.svg", len(data) // 1024, "KB")

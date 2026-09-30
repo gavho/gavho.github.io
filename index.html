@@ -9,12 +9,12 @@
   <meta property="og:description" content="Data, software and engineering for airports and infrastructure.">
   <meta property="og:image" content="assets/img/ord-aerial.jpg">
   <meta name="theme-color" content="#010102">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235e6ad2'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff7a1a'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/ord-aerial.jpg">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
@@ -25,18 +25,16 @@
         <span>Gavin Ho</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#range">Range</a>
-        <a href="#data">Data</a>
-        <a href="#engineering">Engineering</a>
-        <a href="#code">Code</a>
+        <a href="work.html">Work</a>
         <a href="#experience">Experience</a>
-        <a href="work.html">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
       </nav>
       <div class="nav-end">
         <a href="https://github.com/gavho" class="icon-link" target="_blank" rel="noopener" aria-label="GitHub profile">
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         </a>
-        <a href="#contact" class="btn btn-secondary nav-cta">Get in touch</a>
+        <a href="#contact" class="btn btn-secondary nav-cta">Contact</a>
       </div>
     </div>
   </header>
@@ -50,9 +48,8 @@
         <p class="status reveal"><i aria-hidden="true"></i>Technical consulting &amp; product development · Chicago, IL</p>
         <h1 class="reveal">Data, software and engineering for complex infrastructure.</h1>
         <p class="lead reveal">
-          I'm an aviation planner and technical consultant. I lead projects from requirements to delivery, and I build
-          what goes into them: geospatial data pipelines, full-stack tools and mechanical designs, from airport flood
-          models to aerospace component QA.
+          I'm an aviation planner and technical consultant. I listen to what a team needs, analyze the problem and
+          deliver working solutions, from data pipelines and planning dashboards to mechanical designs.
         </p>
         <div class="hero-actions reveal">
           <a href="#range" class="btn btn-primary">See my range</a>
@@ -71,7 +68,7 @@
       <dl class="stats reveal">
         <div><dt>Current role</dt><dd>Aviation Planner<span>R.M. Chin &amp; Associates</span></dd></div>
         <div><dt>Disciplines</dt><dd>Data · Dev · Engineering<span>Consulting &amp; product development</span></dd></div>
-        <div><dt>Leadership</dt><dd>Led a 6-analyst team<span>Operation Barbarossa, Purdue FORCES</span></dd></div>
+        <div><dt>Approach</dt><dd>Listen · Analyze · Deliver<span>Requirements to working solution</span></dd></div>
         <div><dt>Education</dt><dd>Purdue University<span>B.S. · Graduate Certificate, GIS</span></dd></div>
       </dl>
     </section>
@@ -87,39 +84,40 @@
         </p>
       </div>
       <div class="range">
-        <a class="range-panel reveal" href="#data" style="--scene: url('assets/bg/pointcloud.svg'); --tint: 45, 212, 191">
+        <a class="range-panel reveal" href="#data" style="--scene: url('assets/bg/pointcloud.svg'); --tint: 255, 122, 26">
           <span class="range-k mono">01 · Data</span>
           <h3>Spatial data &amp; analytics</h3>
           <p>Models and datasets that turn raw terrain, imagery and archives into decisions.</p>
           <ul>
             <li>Airport flood simulation on a 2.5 m DEM</li>
+            <li>Roadway and traffic analysis</li>
             <li>370+ feature classes analyzed in Python</li>
             <li>1,000+ acres mapped for research</li>
             <li>Calibrated HEC-HMS / HEC-RAS models</li>
           </ul>
           <span class="range-go">Data work →</span>
         </a>
-        <a class="range-panel reveal" href="#code" style="--scene: url('assets/bg/codemap.svg'); --tint: 130, 143, 255">
+        <a class="range-panel reveal" href="#code" style="--scene: url('assets/bg/codemap.svg'); --tint: 255, 122, 26">
           <span class="range-k mono">02 · Development</span>
           <h3>Software &amp; automation</h3>
           <p>Full-stack tools that replace spreadsheets and repetitive work with reliable systems.</p>
           <ul>
-            <li>UAS operations manager (PyQt + SpatiaLite)</li>
+            <li>Dashboards and tools for planning teams and leadership</li>
+            <li>Airfield layout and ALP data tools</li>
             <li>Airport CIP and ORAT planning tools</li>
-            <li>AI-assisted builds with agents and MCP</li>
-            <li>Beat-synced lighting from DJ software</li>
+            <li>AI-assisted development with agents and MCP</li>
           </ul>
           <span class="range-go">Code →</span>
         </a>
-        <a class="range-panel reveal" href="#engineering" style="--scene: url('assets/bg/blueprint.svg'); --tint: 96, 165, 250">
+        <a class="range-panel reveal" href="#engineering" style="--scene: url('assets/bg/blueprint.svg'); --tint: 255, 122, 26">
           <span class="range-k mono">03 · Engineering</span>
           <h3>Mechanical design &amp; QA</h3>
           <p>Hardware designed, drawn, built and inspected to spec.</p>
           <ul>
-            <li>Belcan internship on Rolls-Royce programs</li>
+            <li>Mechanical design at GRYFN: mounts, enclosures, manufactured parts</li>
+            <li>Belcan internship on Rolls-Royce engine programs</li>
             <li>V-22 Osprey stator blade QA/QC review</li>
-            <li>Drone payload systems at GRYFN and Purdue</li>
-            <li>Parts designed by me, then manufactured</li>
+            <li>Drone payload release system, flight-tested</li>
           </ul>
           <span class="range-go">Engineering →</span>
         </a>
@@ -127,7 +125,7 @@
     </section>
 
     <!-- Project leadership -->
-    <section id="leadership" class="scene" style="--scene: url('assets/bg/opsmap.svg'); --tint: 130, 143, 255">
+    <section id="leadership" class="scene" style="--scene: url('assets/bg/opsmap.svg'); --tint: 255, 122, 26">
       <div class="container">
         <div class="lead-band reveal">
           <div>
@@ -162,7 +160,7 @@
     </section>
 
     <!-- Data work -->
-    <section id="data" class="scene" style="--scene: url('assets/bg/contours.svg'); --tint: 45, 212, 191">
+    <section id="data" class="scene" style="--scene: url('assets/bg/contours.svg'); --tint: 200, 190, 175">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Data work</p>
@@ -212,6 +210,12 @@
 
         <div class="grid more">
           <article class="card reveal">
+            <div class="card-top"><span class="badge">Aviation planning</span><span class="mono muted">2026 — Now</span></div>
+            <h3>Planning tools &amp; analysis</h3>
+            <p>Roadway and traffic analysis, airfield layouts and Airport Layout Plan (ALP) data tools, plus dashboards and tools that give planning teams and senior leadership a clear view of their programs.</p>
+            <ul class="tags"><li>Traffic analysis</li><li>ALP data</li><li>Dashboards</li></ul>
+          </article>
+          <article class="card reveal">
             <div class="card-top"><span class="badge">Hydrology · H&amp;H</span><span class="mono muted">Aug — Dec 2024</span></div>
             <h3>Chikaskia River Hydrologic Analysis</h3>
             <p>A watershed study combining hydrologic and hydraulic models. I calibrated HEC-HMS and HEC-RAS against two historical storms and a 100-year event, and showed why calibration matters for mitigation planning.</p>
@@ -241,60 +245,51 @@
     </section>
 
     <!-- Engineering -->
-    <section id="engineering" class="scene scene-blueprint" style="--scene: url('assets/bg/blueprint.svg'); --tint: 96, 165, 250">
+    <section id="engineering" class="scene scene-blueprint" style="--scene: url('assets/bg/blueprint.svg'); --tint: 255, 122, 26">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Engineering &amp; product development</p>
           <h2>From CAD model to manufactured part</h2>
           <p class="section-sub">
-            Before my work moved toward data and consulting, I trained as an engineer. I've designed parts that went to
-            manufacturing, built and flight-tested payload hardware, and reviewed aerospace components against spec.
+            My engineering background: mechanical design that went to manufacturing, payload hardware that flew, and
+            aerospace components reviewed against spec.
           </p>
         </div>
 
         <article class="feature reveal">
           <div class="feature-head">
-            <span class="badge">Engineering internship</span>
-            <span class="mono muted">Belcan · supporting Rolls-Royce</span>
+            <span class="badge">GRYFN Inc. · Intern → full-time</span>
+            <span class="mono muted"><a class="inline-link" href="https://www.gryfn.io" target="_blank" rel="noopener">gryfn.io ↗</a></span>
           </div>
-          <h3>Aerospace engine programs</h3>
-          <div class="feature-body">
-            <div>
-              <span class="mono feature-k">F130 · B-52</span>
-              <p>Supported design work on the Rolls-Royce F130, the engine selected to re-engine the U.S. Air Force B-52 fleet.</p>
-            </div>
-            <div>
-              <span class="mono feature-k">V-22 Osprey</span>
-              <p>Performed QA/QC review of engine stator blades for the V-22 Osprey, checking components and documentation against engineering requirements.</p>
-            </div>
+          <h3>Mechanical design at GRYFN</h3>
+          <p class="feature-lead">GRYFN builds GOBI, a drone sensor payload that captures RGB, LiDAR and hyperspectral data at the same time. I designed the hardware that puts it in the air.</p>
+          <div class="feature-body feature-4">
+            <div><span class="mono feature-k">Mounts</span><p>Payload mounts and adapters for integrating sensors onto drone platforms.</p></div>
+            <div><span class="mono feature-k">Enclosures</span><p>Housings and covers that protect sensors and electronics in the field.</p></div>
+            <div><span class="mono feature-k">Manufacturing</span><p>Production drawings for parts that were manufactured from my designs.</p></div>
+            <div><span class="mono feature-k">Prototype &amp; test</span><p>3D-printed prototypes, fit checks and flight testing before release.</p></div>
           </div>
         </article>
 
-        <div class="grid eng-grid">
+        <div class="grid eng-grid eng-3">
           <article class="card reveal">
-            <div class="card-top"><span class="badge">GRYFN Inc.</span><span class="mono muted">Intern → full-time</span></div>
-            <h3>UAS sensor integration hardware</h3>
-            <p>Designed mounts and integration hardware in CAD for drone-based remote sensing systems, translating mission needs into parts that could be built and flown.</p>
-            <ul class="tags"><li>CAD</li><li>3D printing</li><li>Integration</li></ul>
+            <div class="card-top"><span class="badge">Belcan · Rolls-Royce</span><span class="mono muted">Internship</span></div>
+            <h3>Aerospace engine programs</h3>
+            <p>Supported design work on the Rolls-Royce F130, the engine selected to re-engine the B-52, and performed QA/QC review of V-22 Osprey engine stator blades against engineering requirements.</p>
+            <ul class="tags"><li>F130</li><li>V-22</li><li>QA/QC</li></ul>
           </article>
           <article class="card reveal">
             <div class="card-top"><span class="badge">Purdue capstone</span><span class="mono muted">2024 — 2025</span></div>
             <h3>Payload release for moving vessels</h3>
-            <p>Led mechanical and electrical design of a servo-actuated drop system for the DJI Matrice 300. I modeled it in Siemens NX, wired an Arduino wireless trigger and flight-tested it at distances over 1.8 miles.</p>
+            <p>Led mechanical and electrical design of a servo-actuated drop system for the DJI Matrice 300, modeled in Siemens NX with an Arduino wireless trigger, and flight-tested over 1.8 miles.</p>
             <ul class="tags"><li>Siemens NX</li><li>Arduino</li><li>Flight test</li></ul>
             <a class="card-link" href="work.html#payload">See the build →</a>
           </article>
           <article class="card reveal">
-            <div class="card-top"><span class="badge">Design for manufacturing</span><span class="mono muted">Drawings</span></div>
-            <h3>Parts designed, drawn and made</h3>
-            <p>Produced engineering drawings that were used to manufacture parts I designed, with the dimensions and tolerances needed for fabrication, backed by formal training in engineering drawings for manufacturing.</p>
-            <ul class="tags"><li>Mechanical drawings</li><li>Tolerancing</li><li>Inventor</li></ul>
-          </article>
-          <article class="card reveal">
             <div class="card-top"><span class="badge">Inspection</span><span class="mono muted">ASNT</span></div>
             <h3>Non-destructive testing</h3>
-            <p>Certified NDT Level II in magnetic particle and liquid penetrant testing, plus Level I eddy current. That training shapes how I think about defects, tolerances and QA.</p>
-            <ul class="tags"><li>MT</li><li>PT</li><li>ET</li><li>QA/QC</li></ul>
+            <p>Certified NDT Level II in magnetic particle and liquid penetrant testing, plus Level I eddy current. It shapes how I think about defects, tolerances and QA.</p>
+            <ul class="tags"><li>MT</li><li>PT</li><li>ET</li></ul>
           </article>
         </div>
 
@@ -310,7 +305,7 @@
     </section>
 
     <!-- Code -->
-    <section id="code" class="scene scene-code" style="--scene: url('assets/bg/codemap.svg'); --tint: 130, 143, 255">
+    <section id="code" class="scene scene-code" style="--scene: url('assets/bg/codemap.svg'); --tint: 200, 190, 175">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Code</p>
@@ -321,35 +316,25 @@
           </p>
         </div>
         <div class="repos">
-          <a class="repo card reveal" href="https://github.com/gavho/UAS-Operations-Manager" target="_blank" rel="noopener">
-            <span class="repo-name mono">UAS-Operations-Manager</span>
-            <p>All-in-one flight operations, fleet and sensor tracking app with a SQLite / SpatiaLite geospatial database, automated backups and schema migrations.</p>
-            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · PyQt</span>
-          </a>
           <a class="repo card reveal" href="https://github.com/gavho/OP-Barbarossa" target="_blank" rel="noopener">
             <span class="repo-name mono">OP-Barbarossa</span>
             <p>Analysis code and scripts from the Operation Barbarossa research project: clustering, path generation and center-of-mass workflows.</p>
-            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · ArcPy</span>
+            <span class="repo-meta"><i ></i>Python · ArcPy</span>
           </a>
           <a class="repo card reveal" href="https://github.com/gavho/rkbx_govee_link" target="_blank" rel="noopener">
             <span class="repo-name mono">rkbx_govee_link</span>
             <p>Connects rekordbox to Govee smart bulbs so lights follow a live DJ set, with Python scripts for custom settings and effects.</p>
-            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · IoT</span>
+            <span class="repo-meta"><i ></i>Python · IoT</span>
           </a>
           <a class="repo card reveal" href="https://github.com/gavho/GIS-Scripts" target="_blank" rel="noopener">
             <span class="repo-name mono">GIS-Scripts</span>
-            <p>GIS scripts and workarounds for geoprocessing tools that are locked behind higher Esri license levels.</p>
-            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · GIS</span>
+            <p>Python implementations of common geoprocessing steps, so workflows run without advanced-tier licenses.</p>
+            <span class="repo-meta"><i ></i>Python · GIS</span>
           </a>
           <a class="repo card reveal" href="https://github.com/gavho/SQLite-DB-Editor" target="_blank" rel="noopener">
             <span class="repo-name mono">SQLite-DB-Editor</span>
             <p>A lightweight browser for opening and editing SQLite databases directly, with schema error flagging across tables.</p>
-            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python</span>
-          </a>
-          <a class="repo card reveal" href="https://github.com/gavho/Flight-Tracker" target="_blank" rel="noopener">
-            <span class="repo-name mono">Flight-Tracker</span>
-            <p>The PyQt5 prototype that grew into the operations manager: mission forms, live database editing and planned METAR weather autofill.</p>
-            <span class="repo-meta"><i style="--lang: #3572A5"></i>Python · PyQt5</span>
+            <span class="repo-meta"><i ></i>Python</span>
           </a>
         </div>
         <div class="repo-foot reveal">
@@ -360,7 +345,7 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="scene" style="--scene: url('assets/bg/routes.svg'); --tint: 94, 106, 210">
+    <section id="experience" class="scene" style="--scene: url('assets/bg/routes.svg'); --tint: 200, 190, 175">
       <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Experience</p>
@@ -373,7 +358,7 @@
           <div class="row-body">
             <h3>Aviation Planner</h3>
             <p class="org">R.M. Chin &amp; Associates, Inc. · Chicago, IL</p>
-            <p>Consulting on aviation planning projects, delivering geospatial analysis, data workflows and technical solutions for airport clients. I also build internal planning software, including a capital improvement program prioritization app, an operational readiness (ORAT) program tracker with dependency mapping and a presentation generator for client-ready decks.</p>
+            <p>Consulting on aviation planning projects: roadway and traffic analysis, airfield layouts and ALP data tools, and dashboards for planning teams and leadership. I also build internal planning software, including a capital improvement program prioritization app, an ORAT program tracker with dependency mapping and a presentation generator.</p>
           </div>
         </li>
         <li class="row reveal">
@@ -381,7 +366,7 @@
           <div class="row-body">
             <h3>GIS Analyst &amp; Developer</h3>
             <p class="org">GRYFN Inc. · West Lafayette, IN</p>
-            <p>Started as an intern and grew into a full-time role at a remote sensing startup. Led full-stack development of a Python and SQLite operations app with live GIS weather integration, and designed CAD hardware for sensor system integration.</p>
+            <p>Started as an intern and grew into a full-time role. Led mechanical design for drone sensor payloads, including mounts, enclosures and production drawings for manufactured parts, and built a Python and SQLite operations app with live GIS weather data.</p>
           </div>
         </li>
         <li class="row reveal">
@@ -421,12 +406,12 @@
     </section>
 
     <!-- Capabilities -->
-    <section id="skills" class="scene" style="--scene: url('assets/bg/circuit.svg'); --tint: 130, 143, 255">
+    <section id="skills" class="scene" style="--scene: url('assets/bg/circuit.svg'); --tint: 255, 122, 26">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Capabilities</p>
           <h2>Skills and software</h2>
-          <p class="section-sub">Data and development at the core, backed by hands-on engineering and AI-assisted delivery.</p>
+          <p class="section-sub">Data and development at the core, backed by hands-on engineering and planning experience.</p>
         </div>
 
         <div class="caps">
@@ -468,7 +453,7 @@
             <p>Hardware that has to work: CAD, drawings, prototyping and embedded control.</p>
             <ul>
               <li>Siemens NX &amp; Inventor<span>Parametric parts · assemblies</span></li>
-              <li>Mechanical drawings<span>Drawings for manufacturing</span></li>
+              <li>Production drawings<span>Manufactured parts at GRYFN</span></li>
               <li>3D design &amp; printing<span>Rapid prototyping</span></li>
               <li>Soldering &amp; electronics<span>Arduino · servos · wireless</span></li>
               <li>AutoCAD &amp; Revit<span>Drafting · BIM · CAD-GIS</span></li>
@@ -482,26 +467,26 @@
               <li>HEC-RAS<span>Hydraulic modeling</span></li>
               <li>Terrain &amp; DEM analysis<span>D8 · watershed delineation</span></li>
               <li>Predictive modeling<span>Rainfall scenario simulation</span></li>
-              <li>Weather data<span>Computational weather modeling</span></li>
+              <li>Roadway &amp; traffic analysis<span>Planning studies</span></li>
             </ul>
           </article>
           <article class="card cap reveal">
-            <div class="cap-head"><h3>Leadership &amp; delivery</h3><span class="mono">06</span></div>
+            <div class="cap-head"><h3>Planning &amp; delivery</h3><span class="mono">06</span></div>
             <p>The project discipline that turns technical work into a finished deliverable.</p>
             <ul>
-              <li>Project management<span>Teams of 6 to 30</span></li>
-              <li>Client liaison<span>Requirements · stakeholder updates</span></li>
+              <li>Airfield layouts &amp; ALP data<span>Planning initiatives</span></li>
+              <li>Dashboards for leadership<span>Program status · decisions</span></li>
+              <li>Project management<span>Research &amp; planning teams</span></li>
               <li>Airport planning<span>CIP · ORAT · infrastructure</span></li>
               <li>QA/QC<span>Aerospace parts · data · NDT Level II</span></li>
-              <li>UAS operations<span>FAA Part 107</span></li>
             </ul>
           </article>
         </div>
 
         <div class="ai reveal">
           <div class="ai-text">
-            <p class="eyebrow">AI-native workflow</p>
-            <h3>Building with agents, not just chatbots</h3>
+            <p class="eyebrow">AI workflow</p>
+            <h3>AI-assisted development</h3>
             <p>
               I use AI coding agents as part of my engineering process. The agent works from a written spec and
               connects to the tools I already use through the Model Context Protocol. I review every change.
@@ -522,19 +507,14 @@
     </section>
 
     <!-- Side projects -->
-    <section id="off-hours" class="scene scene-rgb" style="--scene: url('assets/bg/spectrum.svg'); --tint: 177, 61, 255">
+    <section id="off-hours" class="scene" style="--tint: 200, 190, 175">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Off the clock</p>
           <h2>Side projects</h2>
-          <p class="section-sub">What I build for fun. Each one is still an excuse to wire, script or reverse-engineer something.</p>
+          <p class="section-sub">Small projects outside of work.</p>
         </div>
         <div class="fun">
-          <article class="card fun-card reveal">
-            <span class="fun-k mono">DJ · rekordbox</span>
-            <h3>DJing</h3>
-            <p>I mix with rekordbox. It's also where my interest in timing, beat data and live systems shows up.</p>
-          </article>
           <article class="card fun-card reveal">
             <span class="fun-k mono">Python · IoT · RGB</span>
             <h3>Programmable RGB lighting</h3>
@@ -566,12 +546,12 @@
           <h2>Hi, I'm Gavin.</h2>
           <p class="about-text">
             I'm a technical professional working in product development and consulting. My roots are in engineering: PLTW in
-            high school, then aerospace QA/QC at Belcan and drone hardware at Purdue and GRYFN. From there my work moved into
+            high school, aerospace QA/QC at Belcan, then mechanical design for drone payloads at GRYFN. From there my work moved into
             data and software, and I earned a B.S. and a Graduate Certificate in Geospatial Information Science at Purdue.
           </p>
           <p class="about-text">
-            Today I consult on aviation planning in Chicago. I lead projects, and I build the data pipelines, tools and
-            analysis inside them. Clients get a single person who understands the problem from requirements through delivery.
+            Today I consult on aviation planning in Chicago. I listen first, make sure I understand the problem, then
+            analyze it and deliver a solution, whether that's a dataset, a dashboard, a tool or a design.
           </p>
           <div class="hero-actions">
             <a href="#skills" class="btn btn-secondary">Full skill set</a>
