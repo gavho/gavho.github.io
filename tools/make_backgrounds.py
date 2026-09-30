@@ -302,9 +302,72 @@ def routes():
     return svg("".join(body))
 
 
+# --- Airport Layout Plan style drawing (current role) -------------------------
+def alp():
+    """A generic large-hub airfield in ALP drafting style: parallel runways, a
+    crosswind runway, taxiways, terminal core, RPZs, labels and a title block."""
+    ink, hot = INK, HOT
+    body = []
+    # faint survey grid
+    grid = "".join(f'<path d="M{x} 0V{H}"/>' for x in range(0, W + 1, 100)) + "".join(f'<path d="M0 {y}H{W}"/>' for y in range(0, H + 1, 100))
+    body.append(f'<g stroke="{ink}" stroke-opacity=".05">{grid}</g>')
+
+    def runway(x1, y1, x2, y2, w, a_lbl, b_lbl):
+        ang = math.atan2(y2 - y1, x2 - x1)
+        nx, ny = -math.sin(ang) * w / 2, math.cos(ang) * w / 2
+        pts = [(x1 + nx, y1 + ny), (x2 + nx, y2 + ny), (x2 - nx, y2 - ny), (x1 - nx, y1 - ny)]
+        d = "M" + " L".join(f"{f(px)} {f(py)}" for px, py in pts) + "Z"
+        out = [f'<path d="{d}" fill="{hot}" fill-opacity=".06" stroke="{hot}" stroke-opacity=".75" stroke-width="1.3"/>',
+               f'<path d="M{f(x1)} {f(y1)}L{f(x2)} {f(y2)}" stroke="{hot}" stroke-opacity=".45" stroke-dasharray="14 10"/>']
+        # runway protection zones (trapezoids off each end)
+        ux, uy = math.cos(ang), math.sin(ang)
+        for (ex, ey, sgn) in ((x1, y1, -1), (x2, y2, 1)):
+            a0, a1, L = 26, 46, 110
+            p = [(ex + sgn * ux * 20 - uy * a0, ey + sgn * uy * 20 + ux * a0),
+                 (ex + sgn * ux * (20 + L) - uy * a1, ey + sgn * uy * (20 + L) + ux * a1),
+                 (ex + sgn * ux * (20 + L) + uy * a1, ey + sgn * uy * (20 + L) - ux * a1),
+                 (ex + sgn * ux * 20 + uy * a0, ey + sgn * uy * 20 - ux * a0)]
+            out.append(f'<path d="M{" L".join(f"{f(px)} {f(py)}" for px, py in p)}Z" fill="none" stroke="{ink}" stroke-opacity=".3" stroke-dasharray="5 5"/>')
+        out.append(f'<text x="{f(x1 - ux * 40 - 10)}" y="{f(y1 - uy * 40 + 4)}" font-family="monospace" font-size="13" fill="{hot}" fill-opacity=".85">{a_lbl}</text>')
+        out.append(f'<text x="{f(x2 + ux * 18)}" y="{f(y2 + uy * 18 + 4)}" font-family="monospace" font-size="13" fill="{hot}" fill-opacity=".85">{b_lbl}</text>')
+        return "".join(out)
+
+    # four east-west parallels + one crosswind, shifted right of the page text
+    rw = [(700, 150, 1480, 150, 14, "9L", "27R"), (760, 260, 1500, 260, 14, "9C", "27C"),
+          (740, 610, 1500, 610, 14, "10L", "28R"), (800, 740, 1460, 740, 14, "10C", "28C")]
+    for r in rw:
+        body.append(runway(*r))
+    body.append(runway(820, 820, 1330, 330, 12, "4L", "22R"))
+    # parallel taxiways
+    tw = "".join(f'<path d="M{x1 + 10} {y + off}H{x2 - 10}"/>' for x1, y, x2, off in
+                 [(700, 150, 1480, 34), (760, 260, 1500, -34), (740, 610, 1500, 34), (800, 740, 1460, -34)])
+    tw += '<path d="M900 184V576M1120 226V644M1360 184V706"/>'
+    body.append(f'<g fill="none" stroke="{ink}" stroke-opacity=".35" stroke-width="1.2">{tw}</g>')
+    # terminal core with concourses
+    core = ('<rect x="980" y="360" width="300" height="150" rx="4"/>'
+            + "".join(f'<path d="M{x} 360V{300}M{x} 510V{570}"/>' for x in (1010, 1070, 1130, 1190, 1250))
+            + '<path d="M980 435H930M1280 435H1340"/>')
+    body.append(f'<g fill="{ink}" fill-opacity=".04" stroke="{ink}" stroke-opacity=".45" stroke-width="1.2">{core}</g>')
+    # dimension line, north arrow, title block
+    body.append(f'''
+      <g stroke="{ink}" stroke-opacity=".45" fill="none">
+        <path d="M760 300H1500M760 292V308M1500 292V308"/>
+        <path d="M1530 60V110M1530 60L1520 84M1530 60L1540 84"/>
+        <rect x="1250" y="800" width="330" height="84"/><path d="M1250 828H1580M1420 828V884"/>
+      </g>
+      <g font-family="monospace" fill="{ink}" fill-opacity=".7">
+        <text x="1080" y="318" font-size="12">7,400 FT</text>
+        <text x="1523" y="52" font-size="12">N</text>
+        <text x="1262" y="820" font-size="12">AIRPORT LAYOUT PLAN</text>
+        <text x="1262" y="852" font-size="11">ULTIMATE AIRFIELD</text><text x="1432" y="852" font-size="11">SHEET 3 OF 12</text>
+        <text x="1262" y="874" font-size="11">SCALE 1" = 1,000'</text><text x="1432" y="874" font-size="11">ILLUSTRATIVE</text>
+      </g>''')
+    return svg("".join(body))
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, fn in [("contours", contours), ("blueprint", blueprint), ("pointcloud", pointcloud), ("circuit", circuit), ("opsmap", opsmap), ("codemap", codemap), ("routes", routes)]:
+    for name, fn in [("contours", contours), ("blueprint", blueprint), ("pointcloud", pointcloud), ("circuit", circuit), ("opsmap", opsmap), ("codemap", codemap), ("routes", routes), ("alp", alp)]:
         data = fn()
         (OUT / f"{name}.svg").write_text(data, encoding="utf-8")
         print(f"assets/bg/{name}.svg", len(data) // 1024, "KB")
