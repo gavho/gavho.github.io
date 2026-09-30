@@ -274,22 +274,31 @@ def codemap():
     return svg(f'<g fill-opacity=".5">{"".join(rects)}</g>')
 
 
-# --- Career route map (experience) ---------------------------------------------
+# --- Airport map (current role / experience) ----------------------------------
 def routes():
-    c = INK
-    # Rough relative positions of Chicago, West Lafayette, Indianapolis and Plainfield
-    nodes = {"ORD": (1180, 170), "LAF": (1080, 470), "IND": (1270, 690), "PLN": (1160, 720)}
+    """Airports I've worked at, placed by real lat/lon on a simple projection."""
+    airports = {  # ICAO: (lat, lon)
+        "KORD": (41.9786, -87.9048),   # Chicago O'Hare
+        "KMDW": (41.7868, -87.7522),   # Chicago Midway
+        "KRZL": (40.9479, -87.1826),   # Jasper County, Rensselaer IN
+        "KLAF": (40.4123, -86.9369),   # Purdue University Airport
+    }
+    lat0, lon0, scale = 42.15, -88.35, 380   # px per degree
+    kx = math.cos(math.radians(41.2))
+    pos = {k: (940 + (lon - lon0) * scale * kx, 90 + (lat0 - lat) * scale) for k, (lat, lon) in airports.items()}
     body = []
-    for r in range(80, 900, 80):
-        body.append(f'<circle cx="1180" cy="170" r="{r}" fill="none" stroke="{c}" stroke-opacity="{f(0.12 - r / 9000)}" stroke-dasharray="2 6"/>')
-    legs = [("PLN", "IND"), ("IND", "LAF"), ("LAF", "ORD"), ("PLN", "LAF")]
-    for a, b in legs:
-        (x1, y1), (x2, y2) = nodes[a], nodes[b]
-        mx, my = (x1 + x2) / 2 - (y2 - y1) * 0.25, (y1 + y2) / 2 + (x2 - x1) * 0.25
-        body.append(f'<path d="M{x1} {y1} Q{f(mx)} {f(my)} {x2} {y2}" fill="none" stroke="{HOT}" stroke-opacity=".55" stroke-width="1.6" stroke-dasharray="8 6"/>')
-    for k, (x, y) in nodes.items():
-        body.append(f'<g transform="translate({x} {y})"><circle r="5" fill="{HOT}"/><circle r="14" fill="none" stroke="{HOT}" stroke-opacity=".4"/>'
-                    f'<text x="20" y="4" font-family="monospace" font-size="13" fill="{c}" fill-opacity=".8">{k}</text></g>')
+    ox, oy = pos["KORD"]
+    for r in range(60, 1000, 70):
+        body.append(f'<circle cx="{f(ox)}" cy="{f(oy)}" r="{r}" fill="none" stroke="{INK}" stroke-opacity="{f(max(0.02, 0.1 - r / 12000))}" stroke-dasharray="2 6"/>')
+    for a, b in [("KORD", "KMDW"), ("KMDW", "KRZL"), ("KRZL", "KLAF"), ("KORD", "KLAF")]:
+        (x1, y1), (x2, y2) = pos[a], pos[b]
+        mx, my = (x1 + x2) / 2 + (y2 - y1) * 0.18, (y1 + y2) / 2 - (x2 - x1) * 0.18
+        body.append(f'<path d="M{f(x1)} {f(y1)} Q{f(mx)} {f(my)} {f(x2)} {f(y2)}" fill="none" stroke="{HOT}" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="8 6"/>')
+    for k, (x, y) in pos.items():
+        lat, lon = airports[k]
+        body.append(f'<g transform="translate({f(x)} {f(y)})"><circle r="5" fill="{HOT}"/><circle r="14" fill="none" stroke="{HOT}" stroke-opacity=".4"/>'
+                    f'<text x="22" y="-2" font-family="monospace" font-size="14" fill="{INK}" fill-opacity=".85">{k}</text>'
+                    f'<text x="22" y="15" font-family="monospace" font-size="10" fill="{INK}" fill-opacity=".45">{lat:.3f}N {abs(lon):.3f}W</text></g>')
     return svg("".join(body))
 
 
