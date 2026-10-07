@@ -9,5 +9,5 @@ A static site (`index.html` + `styles.css` + `assets/`) with no build step. The 
 
 Preview locally by opening `index.html`, or run `python -m http.server` and visit http://localhost:8000.
 
-All background .svg assets are AI-generated and available to download and use in ('assets/bg/').
+All background .svg assets are AI-generated and available to download and use in `assets/bg/`.
 Feel free to connect, and I can show you how you can make your own GitHub page.
