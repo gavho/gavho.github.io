@@ -120,6 +120,7 @@ button { font: inherit; color: inherit; }
   letter-spacing: -0.04em;
   max-width: 20ch;
 }
+.hero h1 .accent { color: var(--primary); font-style: normal; }
 .lead {
   margin-top: 24px; max-width: 540px;
   font-size: 18px; line-height: 1.55; letter-spacing: -0.1px;
