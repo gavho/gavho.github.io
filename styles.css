@@ -610,8 +610,8 @@ body::before {
 .inline-link { color: var(--primary-hover); border-bottom: 1px solid rgba(var(--primary-rgb),0.35); }
 .inline-link:hover { color: var(--ink); }
 
-/* Technical range: three scene panels */
-.range { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+/* Technical range: four scene panels, 2x2 */
+.range { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .range-panel {
   --c: var(--cut-lg);
   position: relative; isolation: isolate; overflow: hidden;
