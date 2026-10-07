@@ -623,7 +623,7 @@ body::before {
 }
 .range-panel::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: var(--scene) 50% 0% / 180% auto no-repeat;
+  background: var(--scene) var(--pos, 50% 0%) / var(--size, 180% auto) no-repeat;
   opacity: 0.75; transition: transform .8s ease, opacity .3s;
   -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 30%, transparent 70%);
           mask-image: linear-gradient(180deg, #000 0%, #000 30%, transparent 70%);

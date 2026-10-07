@@ -4,7 +4,7 @@
 
 Each scene is a context-matched SVG: topographic contours (hydrology), a turbine
 stator blueprint (engineering), a LiDAR-style point cloud (data), PCB traces
-(skills), a campaign map, a code minimap and a route map. Deterministic: same seed, same art.
+(skills), a campaign map, a code minimap, a route map and a team network. Deterministic: same seed, same art.
 """
 import math
 import random
@@ -274,6 +274,42 @@ def codemap():
     return svg(f'<g fill-opacity=".5">{"".join(rects)}</g>')
 
 
+# --- Team network (people / leadership) ---------------------------------------
+def network():
+    rnd = random.Random(8)
+    c, a = INK, HOT
+    lead = (900, 150)
+    hubs = [((620, 230), "FIELD CREW", 10), ((1090, 70), "LEADERSHIP", 3), ((1080, 280), "STAKEHOLDERS", 5)]
+    links, nodes, rings, labels = [], [], [], []
+    # core team of six around the lead
+    for k in range(6):
+        t = -math.pi / 2 + k * math.pi / 3 + 0.25
+        x, y = lead[0] + 130 * math.cos(t), lead[1] + 95 * math.sin(t)
+        links.append(f'<path d="M{lead[0]} {lead[1]}L{f(x)} {f(y)}"/>')
+        nodes.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="9"/>')
+    # wider groups the lead coordinates with
+    for (hx, hy), name, n in hubs:
+        rings.append(f'<path d="M{lead[0]} {lead[1]}L{hx} {hy}"/>')
+        nodes.append(f'<circle cx="{hx}" cy="{hy}" r="12"/>')
+        anchor = "end" if hx > lead[0] else "start"
+        labels.append(f'<text x="{hx + (-20 if hx > lead[0] else 20)}" y="{hy - 20}" text-anchor="{anchor}">{name}</text>')
+        for _ in range(n):
+            t, r = rnd.uniform(0, 2 * math.pi), rnd.uniform(35, 80)
+            x, y = hx + r * math.cos(t), hy + r * 0.75 * math.sin(t)
+            links.append(f'<path d="M{hx} {hy}L{f(x)} {f(y)}"/>')
+            nodes.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="{rnd.choice([4, 5, 6])}"/>')
+    grid = "".join(f'<path d="M{x} 0V{H}"/>' for x in range(0, W + 1, 80)) + "".join(f'<path d="M0 {y}H{W}"/>' for y in range(0, H + 1, 80))
+    body = [f'<g stroke="{c}" stroke-opacity=".06">{grid}</g>',
+            f'<g stroke="{c}" stroke-opacity=".35" stroke-width="1.2">{"".join(links)}</g>',
+            f'<g stroke="{a}" stroke-opacity=".7" stroke-width="2" stroke-dasharray="6 5">{"".join(rings)}</g>',
+            f'<g fill="#14110e" stroke="{c}" stroke-opacity=".6" stroke-width="1.4">{"".join(nodes)}</g>',
+            f'<circle cx="{lead[0]}" cy="{lead[1]}" r="46" fill="none" stroke="{a}" stroke-opacity=".35"/>',
+            f'<circle cx="{lead[0]}" cy="{lead[1]}" r="18" fill="{a}" fill-opacity=".85"/>',
+            f'<g font-family="monospace" font-size="18" fill="{c}" fill-opacity=".7">{"".join(labels)}'
+            f'<text x="{lead[0] - 150}" y="{lead[1] - 30}" text-anchor="end">LEAD · TEAM OF 6</text></g>']
+    return svg("".join(body))
+
+
 # --- Airport map (current role / experience) ----------------------------------
 def routes():
     """Airports I've worked at, placed by real lat/lon on a simple projection."""
@@ -367,7 +403,7 @@ def alp():
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, fn in [("contours", contours), ("blueprint", blueprint), ("pointcloud", pointcloud), ("circuit", circuit), ("opsmap", opsmap), ("codemap", codemap), ("routes", routes), ("alp", alp)]:
+    for name, fn in [("contours", contours), ("blueprint", blueprint), ("pointcloud", pointcloud), ("circuit", circuit), ("opsmap", opsmap), ("codemap", codemap), ("routes", routes), ("alp", alp), ("network", network)]:
         data = fn()
         (OUT / f"{name}.svg").write_text(data, encoding="utf-8")
         print(f"assets/bg/{name}.svg", len(data) // 1024, "KB")
