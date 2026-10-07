@@ -8,3 +8,5 @@ A static site (`index.html` + `styles.css` + `assets/`) with no build step. The 
 - `assets/img/storymap-cover.jpg`: cover image from the "Rainfall and Runways" ArcGIS StoryMap.
 
 Preview locally by opening `index.html`, or run `python -m http.server` and visit http://localhost:8000.
+
+Feel free to connect, and I can show you how you can make your own page.
